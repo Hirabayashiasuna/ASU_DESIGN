@@ -4,31 +4,719 @@ body {
     background-color: #FCF7E0;
 }
 
+#Header {
+    width: 100%;
+}
+
 .Header_wrap {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 100%;
-
-
+    padding: 32px 3% 0 3%;
 }
 
-.pcnav {
+#Header h1 {
+    width: 249px;
+    height: 32px;
+}
+
+.pc_nav {
     width: 723px;
-    height: 86px;
+    height: 76px;
     background-color: #FFFCEE;
-    border-radius: 43px;
+    border-radius: 38px;
+
 }
 
-.pcnav ul {
+/*
+.pc_nav.pc_nav-menu a {
+    position: relative;
+    text-align: center;
+    overflow: hidden;
+}
+
+.pc_nav.pc_nav-menu a::after {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    display: block;
+    content: "";
+    width: 0%;
+    height: 2px;
+    background: #F05152;
+    transition: all 0.2s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+}
+
+.pc_nav.pc_nav-menu a span {
+    display: block;
+    width: 100%;
+    margin: 0 auto;
+    transition: all 0.2s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+}
+
+.pc_nav.pc_nav-menu a span.ja {
+    position: absolute;
+    top: 100%;
+    left: 0%;
+    font-size: 14px;
+    font-weight: bold;
+    white-space: nowrap;
+    color: #F05152;
+}
+
+.pc_nav.pc_nav-menu a:hover::after {
+    width: 100%;
+}
+
+.pc_nav.pc_nav-menu a:hover span.en {
+    transform: translate(0%, -150%);
+}
+
+.pc_nav.pc_nav-menu a:hover span.ja {
+    top: 25%;
+}
+*/
+
+.pc_nav ul {
     display: flex;
     justify-content: space-between;
     padding: 0 92px;
 }
 
-.pcnav ul li {
-    font-size: 18px;
+.pc_nav ul li {
+    font-size: 16px;
     font-weight: 800;
     color: #72716E;
+    padding: 32px 0;
+}
 
+
+
+
+
+#top {
+    text-align: center;
+}
+
+.main_visual_pc {
+    padding: 165px;
+
+}
+
+
+
+.main_visual_pc img {
+    position: relative;
+    width: 848px;
+    height: 285px;
+}
+
+.main_visual_swich {
+    position: absolute;
+    top: 266px;
+    left: 825px;
+    padding-right: 165px;
+}
+
+.toggleButton {
+    position: relative;
+    display: block;
+    width: 276px;
+    height: 120px;
+    border-radius: 60px;
+    background-color: #fc6349;
+    cursor: pointer;
+}
+
+.toggleButton:has(:focus-visible) {
+    outline: auto;
+    outline: auto -webkit-focus-ring-color;
+}
+
+.toggleButton:has(:checked) {
+    background-color: #05c87a;
+}
+
+.toggleButton__checkbox {
+    appearance: none;
+    position: absolute;
+    top: 57px;
+    left: 3px;
+    width: 110px;
+    height: 110px;
+    border-radius: 110px;
+    transform: translateY(-50%);
+    outline: none;
+    background-color: #ffd63a;
+    transition: left 0.2s;
+    cursor: pointer;
+}
+
+.toggleButton__checkbox:checked {
+    left: calc(100% - 120px);
+}
+
+.swich_face img {
+    position: absolute;
+    top: 312px;
+    left: 863px;
+    width: 38px;
+    height: 30px;
+}
+
+.loop_text {
+    align-items: center;
+    background: #ffd63a;
+    display: flex;
+    height: 75px;
+    line-height: 40px;
+    overflow: hidden;
+    width: 100%;
+    white-space: nowrap;
+    margin-top: 100px;
+    z-index: 1;
+
+}
+
+.loop_text ul {
+    animation: flowing 40s linear infinite;
+    transform: translateX(100%);
+    margin: 0;
+    padding: 0;
+}
+
+.loop_text ul li {
+    display: inline-block;
+    font-size: 36px;
+    color: #FCF7E0;
+    padding-right: 10px;
+}
+
+@keyframes flowing {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+/*ここからコンセプト*/
+#concept {
+    text-align: center;
+}
+
+.concept_text {
+    padding-top: 248px;
+    padding-bottom: 143px;
+    font-weight: 800;
+}
+
+.catch_1 {
+    padding-bottom: 45px;
+    font-size: 40px;
+    line-height: 1.75;
+    color: #ffd63a;
+    letter-spacing: 0.1em;
+
+}
+
+.font_style {
+    font-size: 125%;
+    color: #05c87a;
+}
+
+.catch_2 {
+    font-size: 22px;
+    line-height: 2;
+    color: #72716E;
+    letter-spacing: 0.1em;
+}
+
+/*ここからスキル＆ワークス*/
+
+#skill_works {
+    max-width: 100%;
+    height: 2002px;
+    background-color: #05c87a;
+    border-top-left-radius: 683px 548px;
+    border-top-right-radius: 683px 548px;
+    border-bottom-left-radius: 683px 548px;
+    border-bottom-right-radius: 683px 548px;
+}
+
+
+.skill_title h2 {
+    padding-top: 260px;
+    padding-bottom: 10px;
+    margin: 0 auto;
+    width: 204px;
+}
+
+.skill_title p {
+    padding-bottom: 55px;
+    text-align: center;
+    font-size: 23px;
+    color: #FFFCEE;
+}
+
+.skill_inner {
+    padding: 0 15%;
+    max-width: 970px;
+    display: flex;
+}
+
+.skill_inner h3 {
+    padding-top: 83px;
+    padding-bottom: 4px;
+    font-size: 26px;
+    color: #72716E;
+    letter-spacing: 0.15em;
+}
+
+.text_jp {
+    font-size: 14px;
+    color: #72716E;
+    letter-spacing: 0.15em;
+}
+
+.skill_inner p {
+    padding: 0 69px;
+    font-size: 16px;
+    line-height: 1.75;
+}
+
+.skill_design {
+    margin-right: 55px;
+    text-align: center;
+    width: 436px;
+    height: 627px;
+    background-color: #FFFCEE;
+    border-radius: 218px;
+}
+
+.skill_inner img {
+    padding-top: 27px;
+    padding-bottom: 30px;
+    width: 154px;
+}
+
+.skill_design ul {
+    padding-top: 24px;
+    display: flex;
+}
+
+.skill_design ul li {
+    font-size: 14px;
+    width: 108px;
+    height: 25px;
+    border-radius: 12px;
+    border: 1px solid #4C4B46;
+}
+
+.skill_coding {
+    text-align: center;
+    width: 436px;
+    height: 627px;
+    background-color: #FFFCEE;
+    border-radius: 218px;
+}
+
+.skill_coding ul {
+    padding-top: 49px;
+    display: flex;
+}
+
+.skill_coding ul li {
+    font-size: 14px;
+    width: 108px;
+    height: 25px;
+    border-radius: 12px;
+    border: 1px solid #4C4B46;
+}
+
+#works h2 {
+    padding-top: 117px;
+    padding-bottom: 10px;
+    width: 293px;
+    margin: 0 auto;
+}
+
+#works p {
+    padding-bottom: 86px;
+    text-align: center;
+    font-size: 23px;
+    font-size: 23px;
+    color: #FFFCEE;
+
+}
+
+.works_btn {
+    position: relative;
+    margin: 0 auto;
+    margin-top: 40px;
+    width: 143px;
+    height: 44px;
+    background-color: #fc6349;
+    border-radius: 22px;
+    cursor: pointer;
+    z-index: 100;
+}
+
+.works_btn p {
+    padding-top: 15px;
+    padding-left: 20px;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 800;
+    color: #FFFCEE;
+}
+
+.check_btn {
+    position: absolute;
+    top: 2px;
+    left: 3px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #ffd63a;
+    cursor: pointer;
+    transition: 0.4s;
+}
+
+.check_btn:hover {
+    transform: translateX(98px);
+}
+
+.works_btn:hover {
+    background-color: #05c87a;
+    border: 3px solid #ffd63a;
+    border-radius: 25px;
+}
+
+
+.about_title h2 {
+    padding-top: 180px;
+    padding-bottom: 10px;
+    margin: 0 auto;
+    width: 280px;
+}
+
+.about_title p {
+    padding-bottom: 80px;
+    text-align: center;
+    font-size: 23px;
+    color: #fc6349;
+}
+
+#about {
+    padding-bottom: 194px;
+}
+
+.about_btn {
+    position: relative;
+    margin: 0 auto;
+    max-width: 1266px;
+    height: 493px;
+    background-color: #fc6349;
+    border-radius: 246px;
+}
+
+.about_btn img {
+    padding-left: 14px;
+    width: 470px;
+}
+
+.click_text img {
+    position: absolute;
+    top: 365px;
+    left: 94px;
+    width: 275px;
+    cursor: pointer;
+}
+
+.about_btn {
+    display: flex;
+    align-items: center;
+}
+
+.about_text_box {
+    padding-left: 127px;
+}
+
+.about_text1 {
+    padding-bottom: 22px;
+    font-size: 35px;
+    font-weight: 800;
+    color: #FFFCEE;
+}
+
+.about_text2 {
+    font-size: 18px;
+    color: #FFFCEE;
+    line-height: 1.94;
+}
+
+/*ここからコンタクトページ*/
+#contact {
+    padding-bottom: 72px;
+}
+
+.contact_wrap {
+    margin: 0 auto;
+    width: 862px;
+    height: 1198px;
+    background-color: #FFFCEE;
+    border: 3px solid #ffd63a;
+    border-radius: 100px;
+}
+
+#contact h2 {
+    padding-top: 116px;
+    padding-bottom: 10px;
+    margin: 0 auto;
+    width: 383px;
+}
+
+.contact_title p {
+    padding-bottom: 34px;
+    text-align: center;
+    font-size: 23px;
+    color: #05c87a;
+}
+
+.contact_text {
+    padding-bottom: 64px;
+    text-align: center;
+    font-size: 16px;
+    color: #4C4B46;
+    line-height: 1.87;
+
+}
+
+.c-form {
+    max-width: 684px;
+    margin: 0 auto;
+}
+
+.c-form__item {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    margin-bottom: 40px;
+}
+
+.c-form__label,
+.c-form__input {
+    padding: 10px;
+}
+
+.c-form__label {
+    width: 90%;
+}
+
+.c-form__input {
+    width: 90%;
+    font-size: 16px;
+    background-color: #F5F5EB;
+    border-radius: 21px;
+}
+
+.c-form__input:focus-visible {
+    outline: #ffd63a auto 1px;
+}
+
+.c-form__required {
+    position: relative;
+    width: 38px;
+    height: 16px;
+    font-size: 12px;
+    color: #FFFCEE;
+    background-color: #fc6349;
+    border-radius: 8px;
+    padding: 3px 7px 3px 7px;
+    margin: 0 0 0 18px;
+}
+
+textarea.c-form__input {
+    height: 160px;
+}
+
+.c-form__submit {
+    text-align: center;
+}
+
+.c-form__submit button {
+    margin: 0 auto;
+    margin-top: 40px;
+    width: 143px;
+    height: 44px;
+    background-color: #fc6349;
+    border-radius: 22px;
+    cursor: pointer;
+    z-index: 100;
+}
+
+.c-form__submit button:hover {
+    background-color: #05c87a;
+    border: 3px solid #ffd63a;
+    border-radius: 25px;
+}
+
+.send_check_btn:hover {
+    transform: translateX(98px);
+}
+
+
+.send_check_btn {
+    position: absolute;
+    top: 5740px;
+    left: 608px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #ffd63a;
+    cursor: pointer;
+    transition: 0.4s;
+}
+
+#Footer {
+    display: flex;
+    max-width: 100%;
+    height: 150px;
+    background-color: #ffd63a;
+
+}
+
+#Footer h1 {
+    width: 249px;
+    height: 32px;
+}
+
+#Footer p {
+    padding-top: 24px;
+    font-size: 14px;
+    color: #FFFCEE;
+}
+
+.footer-wrap {
+    display: flex;
+    align-items: center;
+    padding: 48px 3% 0 3%;
+}
+
+
+.footer-list ul {
+    padding-left: 553px;
+    display: flex;
+    justify-content: space-between;
+    width: 462px;
+}
+
+.footer-list ul li {
+    display: flex;
+    font-size: 16px;
+    font-weight: 800;
+    color: #FFFCEE;
+}
+
+
+@media (min-width: 640px) {
+    .c-form__item {
+        flex-wrap: nowrap;
+    }
+
+    .c-form__label {
+        width: 40%;
+    }
+
+    .c-form__input {
+        width: 55%;
+    }
+}
+
+
+
+
+
+/*worksスライダー*/
+
+.slider {
+    width: 96%;
+    margin: 0 auto;
+}
+
+
+.slider li {
+    display: flex;
+    text-align: center;
+    width: 300px;
+    height: 228px;
+    border-radius: 48px;
+    background-color: #FFFCEE;
+}
+
+.slider img {
+    width: 100%;
+    /*スライダー内の画像を横幅100%に*/
+    height: auto;
+}
+
+.slider .slick-slide {
+    margin: 0 10px;
+}
+
+.slick-prev,
+.slick-next {
+    position: absolute;
+    /*絶対配置にする*/
+    top: 42%;
+    cursor: pointer;
+    /*マウスカーソルを指マークに*/
+    outline: none;
+}
+
+
+.slick-prev {
+    /*戻る矢印の位置と形状*/
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #ffd63a;
+    left: -1.5%;
+    z-index: 100;
+}
+
+.slick-prev::before {
+    content: '';
+    display: block;
+    width: 16px;
+    height: 16px;
+    border-top: 3px solid #FFFFFF;
+    border-right: 3px solid #FFFFFF;
+    border-radius: 2px;
+    transform: rotate(-135deg);
+}
+
+
+.slick-next {
+    /*次へ矢印の位置と形状*/
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #ffd63a;
+    right: -1.5%;
+    z-index: 100;
+}
+
+.slick-next::before {
+    content: '';
+    display: block;
+    width: 16px;
+    height: 16px;
+    border-top: 3px solid #FFFFFF;
+    border-right: 3px solid #FFFFFF;
+    border-radius: 2px;
+    transform: rotate(45deg);
 }
