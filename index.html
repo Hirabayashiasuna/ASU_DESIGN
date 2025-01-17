@@ -115,11 +115,8 @@
                         <h3>DESIGN</h3>
                         <p class="text_jp">デザイン</p>
                         <img src="images/SVG/skill_ds_illust.svg" alt="黄色のデザインアイコン">
-                        <p>Webサイト、LP、バナー制作をメインに承り
-                            ます。お客様の要望を丁寧にヒアリングし、
-                            デザインしていきます。イメージやコピーな
-                            どもご提案しますのでお気軽にご相談してく
-                            ださい。</p>
+                        <p class="skill_text">
+                            Webサイト、LP、バナー制作をメインに承ります。お客様の要望を丁寧にヒアリングし、デザインしていきます。イメージやコピーなどもご提案しますのでお気軽にご相談してください。</p>
                         <ul>
                             <li>illustrator</li>
                             <li>Photoshop</li>
@@ -129,10 +126,8 @@
                         <h3>CODING</h3>
                         <p class="text_jp">コーディング</p>
                         <img src="images/SVG/skill_cd_illust.svg" alt="黄色のコーディングアイコン">
-                        <p>HTML、CSSを使用しレスポンシブにも対応
-                            したコーディングができます。また、
-                            JavaScripやjQueryを使用してサイトに動き
-                            をつけることも可能です。</p>
+                        <p class="skill_text">
+                            HTML、CSSを使用しレスポンシブにも対応したコーディングができます。また、JavaScripやjQueryを使用してサイトに動きをつけることも可能です。</p>
                         <ul>
                             <li>VScord</li>
                             <li>Git Hub</li>
@@ -148,17 +143,17 @@
                 <p>つくったもの</p>
             </div>
             <ul class="slider">
-                <li>
+                <li class="mk_asudesign">
                     <a href="">
                         <img src="images/1xpng/1xpng/top_mk_asudesign.png" alt="ASU DESIGNモックアップ">
                     </a>
                 </li>
-                <li>
+                <li class="mk_design_1">
                     <a href="">
                         <img src="images/1xpng/1xpng/top_mk_design_1.png" alt="DESIGN CAFEモックアップ">
                     </a>
                 </li>
-                <li>
+                <li class="mk_lifehair">
                     <a href="">
                         <img src="images/1xpng/1xpng/top_mk_lifehair.png" alt="LIFE hair designモックアップ">
                     </a>
@@ -287,7 +282,6 @@
                             <img src="images/SVG/logo_footer.svg" alt="白のASU DESIGNのロゴ">
                         </a>
                     </h1>
-                    <p>©2025 ASU DESIGN</p>
 
                 </div>
                 <div class="footer-list">
@@ -299,6 +293,9 @@
                     </ul>
                 </div>
             </div>
+
+            <p>©2025 ASU DESIGN</p>
+
 
 
 
@@ -327,9 +324,22 @@
                 },
             ]
         });
-        $('.works_btn').hover(function () {
-            $(this).children('a').text('もっと見る')
-        })
+        $('.works_btn').hover(
+            function () {
+                $(this).find('a').text('もっと見る')
+            },
+            function () {
+                $(this).find('a').text('MORE')
+            }
+        );
+        $('.c-form__submit button').hover(
+            function () {
+                $(this).find('button').text('送る')
+            },
+            function () {
+                $(this).find('button').text('SEND')
+            }
+        )
     </script>
 </body>
 
