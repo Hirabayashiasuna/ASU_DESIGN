@@ -49,3 +49,8 @@ img {
 body {
     font-feature-settings: "palt";
 }
+
+::placeholder {
+    font-family: "heisei-maru-gothic-std", sans-serif;
+
+}

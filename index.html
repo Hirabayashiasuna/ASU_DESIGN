@@ -252,7 +252,7 @@
                     <div class="c-form__item">
                         <label class="c-form__label" for="field-name">会社名/団体名</label>
                         <input name="entry.732372047" class="c-form__input" id="field-company" placeholder="例）デザイン会社"
-                            type="text" required="required" />
+                            type="text" />
                     </div>
                     <div class="c-form__item">
                         <label class="c-form__label" for="field-mail">メールアドレス<span
@@ -263,8 +263,8 @@
                     <div class="c-form__item">
                         <label class="c-form__label" for="field-message">お問い合わせ内容<span
                                 class="c-form__required">必須</span></label>
-                        <textarea name="entry.1779529453" class="c-form__input" id="field-message"
-                            placeholder="お問い合わせ内容"></textarea>
+                        <textarea name="entry.833369709" class="c-form__input" id="field-message" placeholder="お問い合わせ内容"
+                            required="required"></textarea>
                     </div>
                     <div class="send_btn">
                         <div class="c-form__submit">
@@ -327,6 +327,9 @@
                 },
             ]
         });
+        $('.works_btn').hover(function () {
+            $(this).children('a').text('もっと見る')
+        })
     </script>
 </body>
 
