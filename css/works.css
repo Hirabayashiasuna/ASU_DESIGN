@@ -1,0 +1,231 @@
+@charset "uft-8";
+
+.works_page_title h2 {
+    padding-top: 90px;
+    padding-bottom: 10px;
+    margin: 0 auto;
+    width: 293px;
+}
+
+.works_page_title p {
+    padding-bottom: 54px;
+    text-align: center;
+    font-size: 23px;
+    color: #05C87A;
+}
+
+.page_link {
+    display: flex;
+    justify-content: center;
+}
+
+.website_link p {
+    padding: 0 22px;
+    font-size: 16px;
+}
+
+.website_link_dot {
+    padding-top: 5px;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    width: 20px;
+}
+
+.banner_link_dot {
+    padding-top: 5px;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    width: 20px;
+}
+
+.site_dot1 {
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    background-color: #FC6349;
+}
+
+.site_dot2 {
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    background-color: #FC6349;
+}
+
+.site_dot3 {
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    background-color: #FC6349;
+}
+
+#website {
+    max-width: 1112px;
+    margin: 0 auto;
+}
+
+.website_title p {
+    font-size: 20px;
+    font-weight: 800;
+    color: #FFFCED;
+    line-height: 48px;
+}
+
+.website_title {
+    margin-top: 72px;
+    margin-bottom: 24px;
+    text-align: center;
+    width: 180px;
+    height: 45px;
+    background-color: #05C87A;
+    border-radius: 22px;
+}
+
+.website_mkup {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.asudesign_mkup {
+    width: 500px;
+    height: 375px;
+    border-radius: 40px;
+    background-color: #FFFCED;
+    border: 3px solid #FFD63A;
+}
+
+.DESIGNCAFE_mkup {
+    width: 500px;
+    height: 375px;
+    border-radius: 40px;
+    background-color: #FFFCED;
+    border: 3px solid #FFD63A;
+}
+
+.LIFEhairdesign_mkup {
+    margin-top: 110px;
+    width: 500px;
+    height: 375px;
+    border-radius: 40px;
+    background-color: #FFFCED;
+    border: 3px solid #FFD63A;
+}
+
+
+.website_mkup img {
+    width: 500px;
+    height: 375px;
+    object-fit: cover;
+}
+
+.website_mkup a {
+    display: inline-block;
+    border-radius: 38px;
+    transition: .3s;
+
+}
+
+.website_mkup a:hover {
+    box-shadow: 10px 10px #FFD63A;
+}
+
+.asudesign_mkup img {
+    padding-left: 24px;
+}
+
+.DESIGNCAFE_mkup img {
+    padding-left: 24px;
+}
+
+.website_mkup p {
+    padding-top: 32px;
+    text-align: center;
+    font-size: 22px;
+}
+
+
+#banner {
+    padding-top: 135px;
+    max-width: 1112px;
+    margin: 0 auto;
+}
+
+.banner_title p {
+    font-size: 20px;
+    font-weight: 800;
+    color: #FFFCED;
+    line-height: 48px;
+}
+
+.banner_title {
+    margin-top: 72px;
+    margin-bottom: 24px;
+    text-align: center;
+    width: 180px;
+    height: 45px;
+    background-color: #05C87A;
+    border-radius: 22px;
+}
+
+.banner_mkup {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.burger_mkup {
+    width: 500px;
+    height: 375px;
+    border-radius: 40px;
+    background-color: #FFFCED;
+    border: 3px solid #FFD63A;
+}
+
+.TRRRRIP_mkup {
+    width: 500px;
+    height: 375px;
+    border-radius: 40px;
+    background-color: #FFFCED;
+    border: 3px solid #FFD63A;
+}
+
+.dezasuta_mkup {
+    margin-top: 110px;
+    width: 500px;
+    height: 375px;
+    border-radius: 40px;
+    background-color: #FFFCED;
+    border: 3px solid #FFD63A;
+}
+
+.banner_mkup a {
+    display: inline-block;
+    border-radius: 38px;
+    transition: .3s;
+
+}
+
+.banner_mkup a:hover {
+    box-shadow: 10px 10px #FFD63A;
+}
+
+
+
+.banner_mkup img {
+    width: 100%;
+    object-fit: cover;
+}
+
+.banner_mkup p {
+    padding-top: 32px;
+    text-align: center;
+    font-size: 22px;
+}
+
+#Footer {
+    margin-top: 135px;
+}

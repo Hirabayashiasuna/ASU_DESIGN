@@ -21,7 +21,8 @@ body {
 }
 
 .pc_nav {
-    width: 623px;
+    padding: 0 34px;
+    width: 502px;
     height: 76px;
     background-color: #FFFCEE;
     border-radius: 38px;
@@ -30,56 +31,85 @@ body {
 
 
 .pc_nav ul {
-    display: flex;
-    justify-content: space-between;
     list-style: none;
-    padding: 0 82px;
+    display: flex;
+    justify-content: center;
 }
 
-.pc_nav ul li {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    font-size: 16px;
-    font-weight: 800;
-    color: #72716E;
-    padding: 28px 0;
-    gap: 2px
+.pc_nav li {
+
+    padding-top: 28px;
 }
 
 .pc_nav a {
+    padding: 0 30px;
+    position: relative;
+    /* 縦並び */
     display: flex;
     flex-direction: column;
     align-items: center;
     text-decoration: none;
     color: inherit;
-    font-size: 16px;
     line-height: 1.5em;
+    /* 高さをline-heightと一緒に */
     height: 1.5em;
+    font-size: 15px;
+    font-weight: 800;
+    color: #72716E;
+    /* はみ出たところを隠す */
     overflow: hidden;
 }
 
-.pc_nav span {
+/* ホバー時の変化をゆっくりに */
+span {
     transition: 0.5s;
 }
 
-a:hover span {
+.pc_nav a span:nth-child(1) {
+    clip-path: inset(0 0 0 0);
+}
+
+.pc_nav a span:nth-child(2) {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 50%);
+    white-space: nowrap;
+}
+
+/* ホバーした時に、テキストを上に1行分ずつずらす */
+a:hover span:nth-child(1) {
     transform: translateY(-100%);
 }
 
-.pc_nav ul li::after {
-    content: "";
-    display: block;
-    width: 8px;
-    height: 8px;
-    background-color: #05c87a;
-    border-radius: 50%;
-    opacity: 0;
-    transition: 0.5s;
-
+.pc_nav a:hover span:nth-child(2) {
+    transform: translate(-50%, -50%);
 }
 
-.pc_nav ul li:has(a:hover)::after {
+/* afterで丸を作成 */
+.pc_nav li::after {
+    content: "";
+    display: block;
+    background: #05c87a;
+    width: 0.3em;
+    height: 0.3em;
+    border-radius: 50%;
+    /* 初期状態は透明に */
+    opacity: 0;
+    /* ホバー時ゆっくり表示されるように */
+    transition: 0.5s;
+}
+
+/* 丸とリンクを縦並びで左右中央揃え */
+.pc_nav li {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+}
+
+/* aタグにホバーした時、親要素のliタグのafterの見た目を変更 */
+.pc_nav li:has(a:hover)::after {
     opacity: 1;
 }
 
@@ -181,6 +211,7 @@ a:hover span {
 .loop_text ul li {
     display: inline-block;
     font-size: 30px;
+    font-weight: 800;
     color: #FCF7E0;
     padding-right: 10px;
 }
@@ -353,7 +384,6 @@ a:hover span {
     font-size: 23px;
     color: #FFFCEE;
 }
-
 
 
 
@@ -651,90 +681,74 @@ textarea.c-form__input {
     }
 }
 
-
-
-
-
 /*worksスライダー*/
 
 .slider {
-    width: 96%;
-    margin: 0 auto;
+    max-width: 100%;
+    padding: 0 39px;
 }
-
 
 .slider li {
-    display: flex;
-    justify-content: center;
-    text-align: center;
+    margin: 11px;
     width: 300px;
     height: 228px;
-    border-radius: 48px;
     background-color: #FFFCEE;
+    border-radius: 48px;
 }
 
 
-
-.slider img {
-    width: 100%;
-    text-align: center;
+.slick-dots {
+    bottom: 20px;
 }
 
-
-.slider .slick-slide {
-    margin: 0 10px;
+.slick-dots li.slick-active button:before,
+.slick-dots li button:before {
+    color: #FFCEEF;
 }
 
-.slick-prev,
-.slick-next {
-    position: absolute;
-    /*絶対配置にする*/
-    top: 42%;
-    cursor: pointer;
-    /*マウスカーソルを指マークに*/
-    outline: none;
+.slick-dotted.slick-slider {
+    margin-bottom: 0;
 }
-
 
 .slick-prev {
     /*戻る矢印の位置と形状*/
     width: 40px;
     height: 40px;
-    border-radius: 50%;
     background-color: #ffd63a;
-    left: -1.5%;
+    border-radius: 50%;
+    left: 22px;
     z-index: 100;
 }
 
 .slick-prev::before {
     content: '';
     display: block;
-    width: 16px;
-    height: 16px;
+    width: 12px;
+    height: 12px;
     border-top: 3px solid #FFFCEE;
     border-right: 3px solid #FFFCEE;
     border-radius: 2px;
     transform: rotate(-135deg);
 }
 
-
 .slick-next {
     /*次へ矢印の位置と形状*/
     width: 40px;
     height: 40px;
-    border-radius: 50%;
     background-color: #ffd63a;
-    right: -1.5%;
+    border-radius: 50%;
+    right: 22px;
     z-index: 100;
+
 }
 
 .slick-next::before {
     content: '';
     display: block;
-    width: 14px;
-    height: 14px;
+    width: 12px;
+    height: 12px;
     border-top: 3px solid #FFFCEE;
-    border-right: 3px solid #FFFCEE;
+    border-right: 3px solid #FFCEEF;
     border-radius: 2px;
     transform: rotate(45deg);
 }

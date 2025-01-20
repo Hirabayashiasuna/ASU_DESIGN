@@ -4,14 +4,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Thanks Page | ASU DESIGN </title>
+    <title>つくったもの | ASU DESIGN</title>
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
     <link rel="stylesheet" type="text/css"
         href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css">
     <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./css/style.css">
-    <link rel="stylesheet" href="./css/thanks.css">
-
+    <link rel="stylesheet" href="./css/works.css">
     <script>
         (function (d) {
             var config = {
@@ -66,53 +65,105 @@
         </div>
     </header>
     <main>
-        <section id="thankspage">
-            <img src="images/SVG/pc_thanks.svg" alt="サンクスの文字">
-            <p>お問い合わせの受付が完了しました。<br />この度はお問い合わせいただき誠にありがとうございます。<br />内容を確認後、折り返しのご連絡をさせていただきますので<br />今しばらくお待ちくださいませ。
-            </p>
-            <div class="thanks_btn">
-                <div>
-                    <p><a href="./index.html">BACK</a></p>
-                </div>
+        <div class="works_page_title">
+            <h2>
+                <img src="images/SVG/works_page_title.svg" alt="WORKSの文字">
+            </h2>
+            <p>つくったもの</p>
+        </div>
+        <div class="page_link">
+            <div class="website_link">
+                <a href="#website">
+                    <p>Webサイト</p>
+                </a>
+                <div class="website_link_dot">
+                    <div class="site_dot1"><span></span></div>
+                    <div class="site_dot2"><span></span></div>
+                    <div class="site_dot3"><span></span></div>
 
-                <div class="thanks_check_btn">
-                    <span></span>
                 </div>
             </div>
+            <div class="banner_link">
+                <a href="#banner">
+                    <p>広告バナー</p>
+                </a>
+                <div class="banner_link_dot">
+                    <div class="site_dot1"><span></span></div>
+                    <div class="site_dot2"><span></span></div>
+                    <div class="site_dot3"><span></span></div>
+                </div>
+            </div>
+        </div>
+        <section id="website">
+            <div class="website_title">
+                <p>Webサイト</p>
+            </div>
+            <div class="website_mkup">
+                <div class="asudesign_mkup">
+                    <a href="">
+                        <img src="images/2x/works_asudesign@2x.png" alt="asudesignのモックアップ">
+                    </a>
+                    <p>ASU DESIGN</p>
+                </div>
+                <div class="DESIGNCAFE_mkup">
+                    <a href="">
+                        <img src="images/2x/works_designcafe@2x.png" alt="asudesignのモックアップ">
+                    </a>
+                    <p>DESIGN CAFE様</p>
+                </div>
+                <div class="LIFEhairdesign_mkup">
+                    <a href="">
+                        <img src="images/2x/works_hairdesign@2x.png" alt="asudesignのモックアップ">
+                    </a>
+                    <p>LIFE hair design様</p>
+                </div>
+            </div>
+        </section>
+        <section id="banner">
+            <div class="banner_title">
+                <p>広告バナー</p>
+            </div>
+            <div class="banner_mkup">
+                <div class="burger_mkup">
+                    <a href="">
+                        <img src="images/2x/works_burger_shop@2x.png" alt="バーガーのバナーのモックアップ">
+                    </a>
+                    <p>バーガーショップ様</p>
+                </div>
+                <div class="TRRRRIP_mkup">
+                    <a href="">
+                        <img src="images/2x/works_TRRRRIP@2x.png" alt="旅行サイトのバナーのモックアップ">
+                    </a>
+                    <p>TRRRRIP.様</p>
+                </div>
+                <div class="dezasuta_mkup">
+                    <a href="">
+                        <img src="images/2x/works_dezasuta@2x.png" alt="携帯会社のバナーのモックアップ">
+                    </a>
+                    <p>デザスタmobile様</p>
+                </div>
+            </div>
+
         </section>
         <footer id="Footer">
             <div class="footer-wrap">
                 <div class="footer-logo">
                     <h1>
-                        <a href="./index.html">
+                        <a href="">
                             <img src="images/SVG/logo_footer.svg" alt="白のASU DESIGNのロゴ">
                         </a>
                     </h1>
-
                 </div>
                 <div class="footer-list">
                     <ul>
-                        <li><a href="./index.html">HOME</a></li>
+                        <li><a href="">HOME</a></li>
                         <li><a href="">WORKS</a></li>
                         <li><a href="">ABOUT</a></li>
                         <li><a href="">CONTACT</a></li>
                     </ul>
                 </div>
             </div>
-
             <p>©2025 ASU DESIGN</p>
         </footer>
     </main>
-    <script>
-        $('.thanks_btn').hover(
-            function () {
-                $(this).find('a').text('もどる')
-            },
-            function () {
-                $(this).find('a').text('BACK')
-            }
-        )
-    </script>
 </body>
-
-</html>
