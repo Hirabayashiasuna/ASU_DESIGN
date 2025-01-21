@@ -4,13 +4,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>つくったもの | ASU DESIGN</title>
+    <title>Webサイト | ASU DESIGN</title>
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
     <link rel="stylesheet" type="text/css"
         href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css">
     <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./css/works.css">
+    <link rel="stylesheet" href="./css/ASU_DESIGN.css">
     <script>
         (function (d) {
             var config = {
@@ -94,57 +95,55 @@
                 </div>
             </div>
         </div>
-        <section id="website">
-            <div class="category_title">
-                <p>Webサイト</p>
-            </div>
-            <div class="website_mkup">
-                <div class="mkup">
-                    <a href="./ASU_DESIGN.html">
+        <section id="works_pre">
+            <div class="works_pre_wrap">
+                <div class="works_pre_img">
+                    <div class="pre_mk_img">
                         <img src="images/2x/works_asudesign@2x.png" alt="asudesignのモックアップ">
-                    </a>
-                    <p>ASU DESIGN</p>
+                    </div>
+                    <div class="pre_jg_img">
+                        <div class="pre_jg_pc">
+                            <img src="images/1x/asudesign_pc-100.jpg" alt="asudesignのPC版jpeg画像">
+                        </div>
+                        <div class="pre_jg_sp">
+                            <img src="images/1x/asudesign_sp-100.jpg" alt="asudesignのSP版jpeg画像">
+                        </div>
+                    </div>
                 </div>
-                <div class="mkup">
-                    <a href="">
-                        <img src="images/2x/works_designcafe@2x.png" alt="asudesignのモックアップ">
-                    </a>
-                    <p>DESIGN CAFE様</p>
-                </div>
-                <div class="mkup1">
-                    <a href="">
-                        <img src="images/2x/works_hairdesign@2x.png" alt="asudesignのモックアップ">
-                    </a>
-                    <p>LIFE hair design様</p>
+            </div>
+            <div class="pre_memo">
+                <div class="pre_memo_wrap">
+                    <p class="pre_title">ポートフォリオサイト</p>
+                    <p class="pre_contents">カテゴリー</p>
+                    <p class="pre_memo_text1">ポートフォリオ</p>
+                    <p class="pre_contents">担当範囲</p>
+                    <p class="pre_memo_text2">デザイン<br />コーディング</p>
+                    <p class="pre_contents">ツール</p>
+                    <p class="pre_memo_text2">illustrator / photoshop<br />VS Cord / Git Hub</p>
+                    <p class="pre_contents">制作期間</p>
+                    <p class="pre_memo_text1">2カ月</p>
+                    <p class="pre_contents">制作概要</p>
+                    <p class="pre_memo_text1">自身のポートフォリオサイトを制作しました。
+                    </p>
+                    <p class="pre_contents">制作ポイント</p>
+                    <p class="pre_memo_text3">・世界観はワクワク、楽しくなるようなサイトを表現したく、明るいカラーに配色したのとアニメーションで動きをつけました。
+                    </p>
+                    <p class="pre_memo_text3">・FVの文字や各タイトルの文字をモチーフのトグルスイッチを連想できるようにデザインしました。
+                    </p>
+                    <p class="pre_memo_text3">・フォントやあしらいなど全て丸で揃えてコンセプトと世界観に合うようにしました。
+                    </p>
                 </div>
             </div>
         </section>
-        <section id="banner">
-            <div class="category_title">
-                <p>広告バナー</p>
-            </div>
-            <div class="banner_mkup">
-                <div class="mkup">
-                    <a href="">
-                        <img src="images/2x/works_burger_shop@2x.png" alt="バーガーのバナーのモックアップ">
-                    </a>
-                    <p>バーガーショップ様</p>
-                </div>
-                <div class="mkup">
-                    <a href="">
-                        <img src="images/2x/works_TRRRRIP@2x.png" alt="旅行サイトのバナーのモックアップ">
-                    </a>
-                    <p>TRRRRIP.様</p>
-                </div>
-                <div class="mkup2">
-                    <a href="">
-                        <img src="images/2x/works_dezasuta@2x.png" alt="携帯会社のバナーのモックアップ">
-                    </a>
-                    <p>デザスタmobile様</p>
-                </div>
+        <div class="works_btn">
+            <div>
+                <p><a href="">BACK</a></p>
             </div>
 
-        </section>
+            <div class="check_btn">
+                <span></span>
+            </div>
+        </div>
         <footer id="Footer">
             <div class="footer-wrap">
                 <div class="footer-logo">
@@ -166,4 +165,16 @@
             <p>©2025 ASU DESIGN</p>
         </footer>
     </main>
+    <script>
+        $('.works_btn').hover(
+            function () {
+                $(this).find('a').text('もどる')
+            },
+            function () {
+                $(this).find('a').text('BACK')
+            }
+        );
+    </script>
 </body>
+
+</html>
