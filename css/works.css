@@ -15,11 +15,12 @@
 }
 
 .page_link {
+    position: relative;
     display: flex;
     justify-content: center;
 }
 
-.website_link p {
+.page_link p {
     padding: 0 22px;
     font-size: 16px;
 }
@@ -38,6 +39,28 @@
     height: 4px;
     border-radius: 50%;
     background-color: #FC6349;
+}
+
+
+
+.website_link a::after {
+    position: absolute;
+    left: 600px;
+    content: '';
+    width: 2%;
+    height: 2px;
+    background: #05C87A;
+    bottom: 1px;
+    transform: scale(0, 1);
+    transform-origin: center top;
+    /*変形（アンダーラインの伸長）の原点がaタグ（各メニュー）の右端*/
+    transition: transform 0.3s;
+    /*変形の時間*/
+}
+
+.website_link a:hover::after {
+    transform: scale(1, 1);
+    /*ホバー後、x軸方向に1（相対値）伸長*/
 }
 
 #website {

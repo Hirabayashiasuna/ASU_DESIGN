@@ -118,7 +118,7 @@
                         <p class="skill_text">
                             Webサイト、LP、バナー制作をメインに承ります。お客様の要望を丁寧にヒアリングし、デザインしていきます。イメージやコピーなどもご提案しますのでお気軽にご相談してください。</p>
                         <ul>
-                            <li>illustrator</li>
+                            <li>Illustrator</li>
                             <li>Photoshop</li>
                         </ul>
                     </div>
@@ -127,10 +127,10 @@
                         <p class="text_jp">コーディング</p>
                         <img src="images/SVG/skill_cd_illust.svg" alt="黄色のコーディングアイコン">
                         <p class="skill_text">
-                            HTML、CSSを使用しレスポンシブにも対応したコーディングができます。また、JavaScripやjQueryを使用してサイトに動きをつけることも可能です。</p>
+                            HTML、CSSを使用しレスポンシブにも対応したコーディングができます。<br />また、JavaScripやjQueryを使用してサイトに動きをつけることも可能です。</p>
                         <ul>
-                            <li>VScord</li>
-                            <li>Git Hub</li>
+                            <li>VSCode</li>
+                            <li>GitHub</li>
                         </ul>
 
                     </div>
@@ -142,39 +142,41 @@
                 </h2>
                 <p>つくったもの</p>
             </div>
-            <ul class="slider">
-                <li class="mk_asudesign">
-                    <a href="">
-                        <img src="images/1xpng/1xpng/top_mk_asudesign.png" alt="ASU DESIGNモックアップ">
-                    </a>
-                </li>
-                <li class="mk_design_1">
-                    <a href="">
-                        <img src="images/1xpng/1xpng/top_mk_design_1.png" alt="DESIGN CAFEモックアップ">
-                    </a>
-                </li>
-                <li class="mk_lifehair">
-                    <a href="">
-                        <img src="images/1xpng/1xpng/top_mk_lifehair.png" alt="LIFE hair designモックアップ">
-                    </a>
-                </li>
-                <li>
-                    <a href="">
-                        <img src="images/1xpng/1xpng/top_mk_berger.png" alt="バーガーショップモックアップ">
-                    </a>
-                </li>
+            <div class="slider">
+                <ul class="slider_inner">
+                    <li class="mk_asudesign">
+                        <a href="">
+                            <img src="images/2x/works_asudesign@2x.png" alt="ASU DESIGNモックアップ">
+                        </a>
+                    </li>
+                    <li class="mk_design_1">
+                        <a href="">
+                            <img src="images/2x/works_designcafe@2x.png" alt="DESIGN CAFEモックアップ">
+                        </a>
+                    </li>
+                    <li class="mk_lifehair">
+                        <a href="">
+                            <img src="images/2x/works_hairdesign@2x.png" alt="LIFE hair designモックアップ">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <img src="images/2x/works_burger_shop@2x.png" alt="バーガーショップモックアップ">
+                        </a>
+                    </li>
 
-                <li>
-                    <a href="">
-                        <img src="images/1xpng/1xpng/top_mk_trrrrip.png" alt="TRRRRIP.モックアップ">
-                    </a>
-                </li>
-                <li>
-                    <a href="">
-                        <img src="images/1xpng/1xpng/top_mk_dezasutamobile.png" alt="デザスタmobileモックアップ">
-                    </a>
-                </li>
-            </ul>
+                    <li>
+                        <a href="">
+                            <img src="images/2x/works_TRRRRIP@2x.png" alt="TRRRRIP.モックアップ">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <img src="images/2x/works_dezasuta@2x.png" alt="デザスタmobileモックアップ">
+                        </a>
+                    </li>
+                </ul>
+            </div>
             <div class="works_btn">
                 <div>
                     <p><a href="">MORE</a></p>
@@ -301,7 +303,7 @@
     <iframe name="hidden_iframe" id="hidden_iframe" style="display: none"
         onload="if(submitted){window.location='./thanks.html';}"></iframe>
     <script>
-        $('.slider').slick({
+        $('.slider_inner').slick({
             autoplay: true,//自動的に動き出すか。初期値はfalse。
             infinite: true,//スライドをループさせるかどうか。初期値はtrue。
             slidesToShow: 4,//スライドを画面に3枚見せる
@@ -326,7 +328,7 @@
                 $(this).find('a').text('MORE')
             }
         );
-        $('.c-form__submit button').hover(
+        $('.c-form__submit').hover(
             function () {
                 $(this).find('button').text('送る')
             },
