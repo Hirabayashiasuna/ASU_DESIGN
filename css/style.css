@@ -262,12 +262,12 @@ a:hover span:nth-child(1) {
 
 #skill_works {
     max-width: 100%;
-    height: 2002px;
+    height: 2102px;
     background-color: #05c87a;
-    border-top-left-radius: 683px 548px;
-    border-top-right-radius: 683px 548px;
-    border-bottom-left-radius: 683px 548px;
-    border-bottom-right-radius: 683px 548px;
+    border-top-left-radius: 662px 518px;
+    border-top-right-radius: 662px 518px;
+    border-bottom-left-radius: 662px 518px;
+    border-bottom-right-radius: 662px 518px;
 }
 
 
@@ -296,7 +296,7 @@ a:hover span:nth-child(1) {
     padding-bottom: 4px;
     font-size: 26px;
     color: #72716E;
-    letter-spacing: 0.15em;
+    letter-spacing: 0.1em;
 }
 
 .text_jp {
@@ -405,6 +405,7 @@ a:hover span:nth-child(1) {
     text-align: center;
     font-size: 16px;
     font-weight: 800;
+    letter-spacing: 0.1em;
     color: #FFFCEE;
 }
 
@@ -697,10 +698,7 @@ textarea.c-form__input {
     height: 270px;
 }
 
-.slider_inner {}
-
-
-.slider_inner li {
+.slider li {
     margin: 11px;
     max-width: 300px;
     width: 22%;
@@ -710,16 +708,35 @@ textarea.c-form__input {
     border-radius: 48px;
 }
 
+.slider li a {
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    border-radius: 38px;
+    transition: .3s;
+}
+
+.slider li a:hover {
+    box-shadow: 10px 10px #FFD63A;
+    border-radius: 38px;
+}
+
 .slider li img {
     padding-top: 20px;
     padding-left: 24px;
+    max-width: 300px;
     width: 90%;
     height: 87%;
     object-fit: cover;
 }
 
+
 .mk_lifehair {
     padding-right: 18px;
+}
+
+.mk_burger_shop {
+    padding-right: 10px;
 }
 
 .slick-dots {

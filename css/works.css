@@ -25,12 +25,17 @@
     font-size: 16px;
 }
 
+.page_link a {
+    position: relative;
+}
+
 .link_dot {
     padding-top: 5px;
     display: flex;
     justify-content: space-between;
     margin: 0 auto;
     width: 20px;
+    transition: 0.3s;
 }
 
 
@@ -42,24 +47,28 @@
 }
 
 
+.page_link>div a:hover~.link_dot {
+    opacity: 0;
+}
 
-.website_link a::after {
+.page_link>div a::after {
     position: absolute;
-    left: 600px;
+    left: 50%;
     content: '';
-    width: 2%;
-    height: 2px;
+    width: 20px;
+    height: 4px;
     background: #05C87A;
-    bottom: 1px;
-    transform: scale(0, 1);
+    border-radius: 2px;
+    bottom: -9px;
+    transform: translateX(-50%) scale(0, 1);
     transform-origin: center top;
     /*変形（アンダーラインの伸長）の原点がaタグ（各メニュー）の右端*/
     transition: transform 0.3s;
     /*変形の時間*/
 }
 
-.website_link a:hover::after {
-    transform: scale(1, 1);
+.page_link>div a:hover::after {
+    transform: translateX(-50%) scale(1, 1);
     /*ホバー後、x軸方向に1（相対値）伸長*/
 }
 
