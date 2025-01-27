@@ -20,6 +20,7 @@
                 h = d.documentElement, t = setTimeout(function () { h.className = h.className.replace(/\bwf-loading\b/g, "") + " wf-inactive"; }, config.scriptTimeout), tk = d.createElement("script"), f = false, s = d.getElementsByTagName("script")[0], a; h.className += " wf-loading"; tk.src = 'https://use.typekit.net/' + config.kitId + '.js'; tk.async = true; tk.onload = tk.onreadystatechange = function () { a = this.readyState; if (f || a && a != "complete" && a != "loaded") return; f = true; clearTimeout(t); try { Typekit.load(config) } catch (e) { } }; s.parentNode.insertBefore(tk, s)
         })(document);
     </script>
+    <script src="js/jquery.inview.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 </head>
@@ -54,7 +55,7 @@
                         </a>
                     </li>
                     <li>
-                        <a href="./index.html #contact">
+                        <a href="#contact">
                             <span>CONTACT</span>
                             <span>お問合わせ</span>
                         </a>
@@ -144,33 +145,33 @@
             </div>
             <div class="slider">
                 <ul class="slider_inner">
-                    <li class="mk_asudesign">
+                    <li class="mk_box">
                         <a href="./ASU_DESIGN.html">
                             <img src="images/2x/works_asudesign@2x.png" alt="ASU DESIGNモックアップ">
                         </a>
                     </li>
-                    <li class="mk_design_cafe">
+                    <li class="mk_box">
                         <a href="./DESIGN_CAFE.html">
                             <img src="images/2x/works_designcafe@2x.png" alt="DESIGN CAFEモックアップ">
                         </a>
                     </li>
-                    <li class="mk_lifehair">
+                    <li class="mk_box2">
                         <a href="./LIFE_hair_design.html">
                             <img src="images/2x/works_hairdesign@2x.png" alt="LIFE hair designモックアップ">
                         </a>
                     </li>
-                    <li class="mk_burger_shop">
+                    <li class="mk_box2">
                         <a href="./burger_shop.html">
                             <img src="images/2x/works_burger_shop@2x.png" alt="バーガーショップモックアップ">
                         </a>
                     </li>
 
-                    <li class="mk_trrrrip">
+                    <li class="mk_box">
                         <a href="./trrrrip.html">
                             <img src="images/2x/works_TRRRRIP@2x.png" alt="TRRRRIP.モックアップ">
                         </a>
                     </li>
-                    <li class="mk_dezasuta_mb">
+                    <li class="mk_box">
                         <a href="./dezasuta_mb.html">
                             <img src="images/2x/works_dezasuta@2x.png" alt="デザスタmobileモックアップ">
                         </a>
@@ -290,7 +291,7 @@
                         <li><a href="./index.html">HOME</a></li>
                         <li><a href="./works.html">WORKS</a></li>
                         <li><a href="./about.html">ABOUT</a></li>
-                        <li><a href="./index.html #contact">CONTACT</a></li>
+                        <li><a href="#contact">CONTACT</a></li>
                     </ul>
                 </div>
             </div>
@@ -311,6 +312,13 @@
             // prevArrow: '<div class="slick-prev"></div>',//矢印部分PreviewのHTMLを変更
             // nextArrow: '<div class="slick-next"></div>',//矢印部分NextのHTMLを変更
             responsive: [
+                {
+                    breakpoint: 1100,
+                    settings: {
+                        slidesToShow: 3,
+                        slidesToScroll: 1,
+                    }
+                },
                 {
                     breakpoint: 767,//モニターの横幅が769px以下の見せ方
                     settings: {
