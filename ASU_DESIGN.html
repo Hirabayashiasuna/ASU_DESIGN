@@ -61,6 +61,25 @@
                 </ul>
             </nav>
         </div>
+        <div class="sp_btn">
+            <span></span>
+        </div>
+        <nav class="sp_nav">
+            <ul class="sp_nav-menu">
+                <li>
+                    <a href="./index.html">HOME</a>
+                </li>
+                <li>
+                    <a href="./works.html">WORKS</a>
+                </li>
+                <li>
+                    <a href="./about.html">ABOUT</a>
+                </li>
+                <li>
+                    <a href="#contact">CONTACT</a>
+                </li>
+            </ul>
+        </nav>
     </header>
     <main>
         <div class="works_page_title">
@@ -108,6 +127,32 @@
                     </div>
                 </div>
             </div>
+            <button id="openModal" class="open-modal">
+                <div>
+                    <p class="modal_btn_text">view all</p>
+                </div>
+                <div class="check_btn2">
+                    <span></span>
+                </div>
+            </button>
+            <div id="myModal" class="modal">
+                <div class="modal-content">
+                    <span id="closeModal">&times;</span>
+                    <div class="modal_img">
+                        <div class="modal_pc">
+                            <p>パソコン版</p>
+                            <img src="images/1x/asudesign_pc-100.jpg" alt="PC版全体">
+                        </div>
+                        <div class="modal_sp">
+                            <p>スマホ版</p>
+                            <img src="images/1x/asudesign_sp-100.jpg" alt="SP版全体">
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+
             <div class="pre_memo">
                 <div class="pre_memo_wrap">
                     <p class="pre_title">ポートフォリオサイト</p>
@@ -163,14 +208,50 @@
         </footer>
     </main>
     <script>
-        $('.works_btn').hover(
-            function () {
-                $(this).find('a').text('もどる')
-            },
-            function () {
-                $(this).find('a').text('BACK')
+        $(function () {
+            $('.sp_btn').on('click', function () {
+                $('.sp_btn').toggleClass('open');
+                $('.sp_nav').fadeToggle();
+            })
+            $('.header_slider').slick({
+                autoplay: true,
+                autoplaySpeed: 2000,
+                dots: true,
+                arrows: false,
+            })
+            $('.works_btn').hover(
+                function () {
+                    $(this).find('a').text('もどる')
+                },
+                function () {
+                    $(this).find('a').text('BACK')
+                }
+            );
+        })
+        // モーダル要素を取得
+        var modal = document.getElementById("myModal");
+        // モーダルを開くボタンを取得
+        var btn = document.getElementById("openModal");
+        // モーダルを閉じるアイコン（×）を取得
+        var span = document.getElementById("closeModal");
+
+        // ボタンがクリックされた時にモーダルを表示
+        btn.onclick = function () {
+            modal.style.display = "block"; // モーダルのdisplayスタイルを"block"にして表示
+        }
+
+        // ×（クローズアイコン）がクリックされた時にモーダルを非表示
+        span.onclick = function () {
+            modal.style.display = "none"; // モーダルのdisplayスタイルを"none"にして非表示
+        }
+
+        // モーダルの外側がクリックされた時にモーダルを非表示
+        window.onclick = function (event) {
+            // クリックされた箇所がモーダル自体（外側）であれば
+            if (event.target == modal) {
+                modal.style.display = "none"; // モーダルのdisplayスタイルを"none"にして非表示
             }
-        );
+        };
     </script>
 </body>
 

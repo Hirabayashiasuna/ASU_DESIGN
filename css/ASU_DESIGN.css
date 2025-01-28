@@ -9,8 +9,8 @@
 
 .pre_mk_img {
     margin-top: 127px;
-    max-width: 636px;
     text-align: center;
+    max-width: 636px;
     width: 100%;
     height: 478px;
     border-radius: 40px;
@@ -66,14 +66,12 @@
 }
 
 .pre_memo_wrap {
-
+    width: 316px;
     padding: 45px 34px 0 34px;
-
 }
 
 .pre_title {
     padding: 0 4px 20px 4px;
-    width: 316px;
     font-size: 22px;
     font-weight: 800;
     border-bottom: 1px solid #CCCCCC;
@@ -81,21 +79,18 @@
 
 .pre_contents {
     padding: 20px 4px 8px 4px;
-    width: 316px;
     font-size: 18px;
     font-weight: 800;
 }
 
 .pre_memo_text1 {
     padding: 0 4px 20px 4px;
-    width: 316px;
     font-size: 16px;
     border-bottom: 1px solid #CCCCCC;
 }
 
 .pre_memo_text2 {
     padding: 0 4px 20px 4px;
-    width: 316px;
     font-size: 16px;
     line-height: 1.5;
     border-bottom: 1px solid #CCCCCC;
@@ -103,7 +98,6 @@
 
 .pre_memo_text3 {
     padding: 0 6px 12px 6px;
-    width: 316px;
     font-size: 16px;
     line-height: 1.68;
     text-indent: -0.5em;
@@ -151,4 +145,150 @@
     background-color: #05c87a;
     border-color: #ffd63a;
     border-radius: 25px;
+}
+
+#openModal {
+    display: none;
+}
+
+#myModal {
+    display: none;
+}
+
+@media screen and (max-width: 1100px) {
+    #works_pre {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #openModal {
+        display: block;
+        margin-bottom: 0px;
+    }
+
+    .open-modal {
+        position: relative;
+        margin: 0 auto;
+        margin-top: 80px;
+        margin-bottom: 80px;
+        width: 174px;
+        height: 44px;
+        background-color: #fc6349;
+        border-radius: 32px;
+        cursor: pointer;
+        border: 3px solid transparent;
+    }
+
+    .modal_btn_text {
+        padding-left: 14px;
+        text-align: center;
+        font-size: 16px;
+        font-weight: 800;
+        color: #FFFCEE;
+    }
+
+
+    /* モーダルウィンドウの基本スタイル */
+    .modal {
+        display: none;
+        /* デフォルトでは非表示に設定 */
+        position: fixed;
+        /* モーダルがページ全体に固定されるように設定 */
+        top: 0;
+        /* ページの最上部からスタート */
+        left: 0;
+        /* ページの最左端からスタート */
+        width: 100%;
+        /* モーダルが画面全体の幅を占める */
+        height: 100%;
+        /* モーダルが画面全体の高さを占める */
+        background-color: rgba(0, 0, 0, 0.4);
+        /* 背景を半透明の黒に設定（モーダルの背後が見えるように） */
+    }
+
+    .modal-content {
+        position: fixed;
+        /* モーダル内容が画面上に固定されるように設定 */
+        top: 50%;
+        /* 縦方向の中央に配置 */
+        left: 50%;
+        /* 横方向の中央に配置 */
+        transform: translate(-50%, -50%);
+        /* 完全に中央に配置するための補正 */
+        width: 80%;
+        /* モーダルの幅 */
+        height: 60px;
+        /* モーダルの高さ */
+
+    }
+
+    .modal_img {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    /* モーダルを閉じるボタン（×）のスタイル */
+    #closeModal {
+        position: absolute;
+        /* モーダル内で絶対位置に配置 */
+        display: flex;
+        /* ボタン内のテキストが中央に配置されるようにフレックスボックスを使用 */
+        align-items: center;
+        /* ボタン内のテキストを縦方向に中央揃え */
+        justify-content: center;
+        /* ボタン内のテキストを横方向に中央揃え */
+        top: -30%;
+        /* モーダル内容の上部から離れた位置に配置 */
+        right: -10%;
+        /* モーダル内容の右端から離れた位置に配置 */
+        font-size: 28px;
+        /* 閉じるボタンのフォントサイズ */
+        font-weight: 800;
+        /* 閉じるボタンのフォントを太字に設定 */
+        cursor: pointer;
+        /* ホバー時にポインタが表示されるように設定 */
+        color: #FFFCEE;
+        /* 閉じるボタンのテキストカラーを白に設定 */
+        width: 40px;
+        /* ボタンの幅 */
+        height: 40px;
+        /* ボタンの高さ */
+        background-color: #72716E;
+        /* ボタンの背景色をダークグレーに設定 */
+        border: #72716E;
+        /* ボタンの境界線を背景と同じ色に設定 */
+        border-radius: 50%;
+        /* ボタンを丸くするための半径 */
+    }
+
+    #works_pre {
+        padding: 0 3%;
+    }
+
+    .check_btn2 {
+        position: absolute;
+        top: -1px;
+        left: 0px;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        background-color: #ffd63a;
+        cursor: pointer;
+        transition: 0.4s;
+    }
+
+
+    .pre_jg_img {
+        display: none;
+    }
+
+    .pre_memo {
+        margin-top: 80px;
+        max-width: 934px;
+        width: 100%;
+    }
+
+    .pre_memo_wrap {
+        width: 93%;
+    }
 }

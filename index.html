@@ -30,7 +30,7 @@
         <div class="Header_wrap">
             <div class="logo">
                 <h1>
-                    <a href="">
+                    <a href="./index.html">
                         <img src="images/SVG/logo.svg" alt="ASU DESIGNの緑ロゴ">
                     </a>
                 </h1>
@@ -59,6 +59,25 @@
                             <span>CONTACT</span>
                             <span>お問合わせ</span>
                         </a>
+                    </li>
+                </ul>
+            </nav>
+            <div class="sp_btn">
+                <span></span>
+            </div>
+            <nav class="sp_nav">
+                <ul class="sp_nav-menu">
+                    <li>
+                        <a href="./index.html">HOME</a>
+                    </li>
+                    <li>
+                        <a href="./works.html">WORKS</a>
+                    </li>
+                    <li>
+                        <a href="./about.html">ABOUT</a>
+                    </li>
+                    <li>
+                        <a href="#contact">CONTACT</a>
                     </li>
                 </ul>
             </nav>
@@ -304,30 +323,43 @@
     <iframe name="hidden_iframe" id="hidden_iframe" style="display: none"
         onload="if(submitted){window.location='./thanks.html';}"></iframe>
     <script>
-        $('.slider_inner').slick({
-            autoplay: true,//自動的に動き出すか。初期値はfalse。
-            infinite: true,//スライドをループさせるかどうか。初期値はtrue。
-            slidesToShow: 4,//スライドを画面に3枚見せる
-            slidesToScroll: 1,//1回のスクロールで3枚の写真を移動して見せる
-            // prevArrow: '<div class="slick-prev"></div>',//矢印部分PreviewのHTMLを変更
-            // nextArrow: '<div class="slick-next"></div>',//矢印部分NextのHTMLを変更
-            responsive: [
-                {
-                    breakpoint: 1100,
-                    settings: {
-                        slidesToShow: 3,
-                        slidesToScroll: 1,
-                    }
-                },
-                {
-                    breakpoint: 767,//モニターの横幅が769px以下の見せ方
-                    settings: {
-                        slidesToShow: 1,//スライドを画面に2枚見せる
-                        slidesToScroll: 1,//1回のスクロールで2枚の写真を移動して見せる
-                    }
-                },
-            ]
-        });
+        $(function () {
+            $('.sp_btn').on('click', function () {
+                $('.sp_btn').toggleClass('open');
+                $('.sp_nav').fadeToggle();
+            })
+            $('.header_slider').slick({
+                autoplay: true,
+                autoplaySpeed: 2000,
+                dots: true,
+                arrows: false,
+            })
+
+            $('.slider_inner').slick({
+                autoplay: true,//自動的に動き出すか。初期値はfalse。
+                infinite: true,//スライドをループさせるかどうか。初期値はtrue。
+                slidesToShow: 4,//スライドを画面に3枚見せる
+                slidesToScroll: 1,//1回のスクロールで3枚の写真を移動して見せる
+                // prevArrow: '<div class="slick-prev"></div>',//矢印部分PreviewのHTMLを変更
+                // nextArrow: '<div class="slick-next"></div>',//矢印部分NextのHTMLを変更
+                responsive: [
+                    {
+                        breakpoint: 1100,
+                        settings: {
+                            slidesToShow: 3,
+                            slidesToScroll: 1,
+                        }
+                    },
+                    {
+                        breakpoint: 767,//モニターの横幅が769px以下の見せ方
+                        settings: {
+                            slidesToShow: 1,//スライドを画面に2枚見せる
+                            slidesToScroll: 1,//1回のスクロールで2枚の写真を移動して見せる
+                        }
+                    },
+                ]
+            });
+        })
         $('.works_btn').hover(
             function () {
                 $(this).find('a').text('もっと!')

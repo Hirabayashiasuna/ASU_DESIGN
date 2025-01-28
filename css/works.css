@@ -164,6 +164,7 @@
 
 #banner {
     padding-top: 135px;
+    padding: 135px 3% 0 3%;
     max-width: 1112px;
     margin: 0 auto;
 }
