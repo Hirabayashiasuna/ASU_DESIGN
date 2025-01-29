@@ -59,6 +59,25 @@
                     </li>
                 </ul>
             </nav>
+            <div class="sp_btn">
+                <span></span>
+            </div>
+            <nav class="sp_nav">
+                <ul class="sp_nav-menu">
+                    <li>
+                        <a href="./index.html">HOME</a>
+                    </li>
+                    <li>
+                        <a href="./works.html">WORKS</a>
+                    </li>
+                    <li>
+                        <a href="./about.html">ABOUT</a>
+                    </li>
+                    <li>
+                        <a href="#contact">CONTACT</a>
+                    </li>
+                </ul>
+            </nav>
         </div>
     </header>
     <main>
@@ -125,7 +144,7 @@
                     <a href="./burger_shop.html">
                         <img src="images/2x/works_burger_shop@2x.png" alt="バーガーのバナーのモックアップ">
                     </a>
-                    <p>バーガーショップ様</p>
+                    <p class="mk_burger_text">バーガーショップ様</p>
                 </div>
                 <div class="mkup">
                     <a href="./trrrrip.html">
@@ -163,4 +182,15 @@
             <p>©2025 ASU DESIGN</p>
         </footer>
     </main>
+    <script>
+        $(function () {
+            $('.sp_btn').on('click', function () {
+                $('.sp_btn').toggleClass('open');
+                $('.sp_nav').fadeToggle();
+            })
+        })
+
+    </script>
 </body>
+
+</html>

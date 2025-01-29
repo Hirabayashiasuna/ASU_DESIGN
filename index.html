@@ -217,22 +217,24 @@
                     <p>わたしについて</p>
                 </div>
                 <div class="about_btn">
-                    <div class="about_check_btn">
-                        <a href="./about.html">
-                            <img src="images/1xpng/1xpng/top_about_photo.png" alt="子供を抱っこしている写真">
-                        </a>
+                    <div class="about_btn_inner">
+                        <div class="about_check_btn">
+                            <a href="./about.html">
+                                <img src="images/1xpng/1xpng/top_about_photo.png" alt="子供を抱っこしている写真">
+                            </a>
 
-                        <div class="click_text">
-                            <img src="images/SVG/pc_about_cliclme.svg" alt="英語でクリックミーの文字">
+                            <div class="click_text">
+                                <img src="images/SVG/pc_about_cliclme.svg" alt="英語でクリックミーの文字">
+                            </div>
                         </div>
-                    </div>
-                    <div class="about_text_box">
-                        <p class="about_text1">ASUNA</p>
-                        <p class="about_text2">はじめまして！あすなです。<br />
-                            つくるもので人と人の想いがつながって、その先に幸せな<br />
-                            気持ちが生まれる。想いをつなぐお手伝いをさせてください。
+                        <div class="about_text_box">
+                            <p class="about_text1">ASUNA</p>
+                            <p class="about_text2">はじめまして！あすなです。<br />
+                                つくるもので人と人の想いがつながって、その先に幸せな<br />
+                                気持ちが生まれる。想いをつなぐお手伝いをさせてください。
 
-                        </p>
+                            </p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -328,12 +330,6 @@
                 $('.sp_btn').toggleClass('open');
                 $('.sp_nav').fadeToggle();
             })
-            $('.header_slider').slick({
-                autoplay: true,
-                autoplaySpeed: 2000,
-                dots: true,
-                arrows: false,
-            })
 
             $('.slider_inner').slick({
                 autoplay: true,//自動的に動き出すか。初期値はfalse。
@@ -344,9 +340,16 @@
                 // nextArrow: '<div class="slick-next"></div>',//矢印部分NextのHTMLを変更
                 responsive: [
                     {
-                        breakpoint: 1100,
+                        breakpoint: 1200,
                         settings: {
                             slidesToShow: 3,
+                            slidesToScroll: 1,
+                        }
+                    },
+                    {
+                        breakpoint: 940,
+                        settings: {
+                            slidesToShow: 2,
                             slidesToScroll: 1,
                         }
                     },
