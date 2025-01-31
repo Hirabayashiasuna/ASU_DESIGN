@@ -63,6 +63,7 @@
         </div>
         <div class="sp_btn">
             <span></span>
+            <p>MENU</p>
         </div>
         <nav class="sp_nav">
             <ul class="sp_nav-menu">
@@ -127,28 +128,35 @@
                     </div>
                 </div>
             </div>
-            <button id="openModal" class="open-modal">
-                <div class="modal_pcbtn">
+            <div id="openModal" class="open-modal">
+                <div id="pcOpen" class="modal_pcbtn">
                     <p class="modal_btn_text">PC版</p>
-                    <div class="check_btn">
+                    <div class="check_btn1">
                         <span></span>
                     </div>
                 </div>
-                <div class="modal_sppbtn">
+                <div id="spOpen" class="modal_sppbtn">
                     <p class="modal_btn_text">SP版</p>
-                    <div class="check_btn">
+                    <div class="check_btn1">
                         <span></span>
                     </div>
                 </div>
-            </button>
-            <div id="myModal" class="modal">
+            </div>
+            <div id="pcModal" class="modal">
                 <div class="modal-content">
-                    <span id="closeModal">&times;</span>
+                    <span id="pcClose">&times;</span>
                     <div class="modal_img">
                         <div class="modal_pc">
                             <p>パソコン版</p>
                             <img src="images/1x/asudesign_pc-100.jpg" alt="PC版全体">
                         </div>
+                    </div>
+                </div>
+            </div>
+            <div id="spModal" class="modal">
+                <div class="modal-content">
+                    <span id="spClose">&times;</span>
+                    <div class="modal_img">
                         <div class="modal_sp">
                             <p>スマホ版</p>
                             <img src="images/1x/asudesign_sp-100.jpg" alt="SP版全体">
@@ -156,6 +164,7 @@
                     </div>
                 </div>
             </div>
+
 
 
             <div class="pre_memo">
@@ -218,36 +227,32 @@
                 $('.sp_btn').toggleClass('open');
                 $('.sp_nav').fadeToggle();
             })
-            $('.header_slider').slick({
-                autoplay: true,
-                autoplaySpeed: 2000,
-                dots: true,
-                arrows: false,
-            })
-            $('.works_btn').hover(
-                function () {
-                    $(this).find('a').text('もどる')
-                },
-                function () {
-                    $(this).find('a').text('BACK')
-                }
-            );
         })
+
+        $('.works_btn').hover(
+            function () {
+                $(this).find('a').text('もどる')
+            },
+            function () {
+                $(this).find('a').text('BACK')
+            }
+        )
+
         // モーダル要素を取得
-        var modal = document.getElementById("myModal");
+        var pcModal = document.getElementById("pcModal");
         // モーダルを開くボタンを取得
-        var btn = document.getElementById("openModal");
+        var pcBtn = document.getElementById("pcOpen");
         // モーダルを閉じるアイコン（×）を取得
-        var span = document.getElementById("closeModal");
+        var pcSpan = document.getElementById("pcClose");
 
         // ボタンがクリックされた時にモーダルを表示
-        btn.onclick = function () {
-            modal.style.display = "block"; // モーダルのdisplayスタイルを"block"にして表示
+        pcBtn.onclick = function () {
+            pcModal.style.display = "block"; // モーダルのdisplayスタイルを"block"にして表示
         }
 
         // ×（クローズアイコン）がクリックされた時にモーダルを非表示
-        span.onclick = function () {
-            modal.style.display = "none"; // モーダルのdisplayスタイルを"none"にして非表示
+        pcSpan.onclick = function () {
+            pcModal.style.display = "none"; // モーダルのdisplayスタイルを"none"にして非表示
         }
 
         // モーダルの外側がクリックされた時にモーダルを非表示
@@ -257,6 +262,32 @@
                 modal.style.display = "none"; // モーダルのdisplayスタイルを"none"にして非表示
             }
         };
+        //sp版
+        // モーダル要素を取得
+        var spModal = document.getElementById("spModal");
+        // モーダルを開くボタンを取得
+        var spBtn = document.getElementById("spOpen");
+        // モーダルを閉じるアイコン（×）を取得
+        var spSpan = document.getElementById("spClose");
+
+        // ボタンがクリックされた時にモーダルを表示
+        spBtn.onclick = function () {
+            spModal.style.display = "block"; // モーダルのdisplayスタイルを"block"にして表示
+        }
+
+        // ×（クローズアイコン）がクリックされた時にモーダルを非表示
+        spSpan.onclick = function () {
+            spModal.style.display = "none"; // モーダルのdisplayスタイルを"none"にして非表示
+        }
+
+        // モーダルの外側がクリックされた時にモーダルを非表示
+        window.onclick = function (event) {
+            // クリックされた箇所がモーダル自体（外側）であれば
+            if (event.target == modal) {
+                modal.style.display = "none"; // モーダルのdisplayスタイルを"none"にして非表示
+            }
+        };
+
     </script>
 </body>
 

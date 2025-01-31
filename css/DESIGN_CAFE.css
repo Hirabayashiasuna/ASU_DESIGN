@@ -26,7 +26,12 @@
     align-items: center;
 }
 
+.cafe_url_btn {
+    position: relative;
+}
+
 .btn_circle {
+    position: relative;
     width: 40px;
     height: 40px;
     background-color: #FFD63A;
@@ -37,8 +42,8 @@
     position: absolute;
     width: 12px;
     height: 12px;
-    top: 38px;
-    left: 192px;
+    top: 30%;
+    left: 24%;
     border-top: 3px solid #FFFCEE;
     border-right: 3px solid #FFFCEE;
     border-radius: 2px;
