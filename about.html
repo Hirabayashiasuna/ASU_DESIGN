@@ -62,6 +62,26 @@
                     </li>
                 </ul>
             </nav>
+            <div class="sp_btn">
+                <span></span>
+                <p>MENU</p>
+            </div>
+            <nav class="sp_nav">
+                <ul class="sp_nav-menu">
+                    <li>
+                        <a href="./index.html">HOME</a>
+                    </li>
+                    <li>
+                        <a href="./works.html">WORKS</a>
+                    </li>
+                    <li>
+                        <a href="./about.html">ABOUT</a>
+                    </li>
+                    <li>
+                        <a href="#contact">CONTACT</a>
+                    </li>
+                </ul>
+            </nav>
         </div>
     </header>
     <main>
@@ -97,7 +117,7 @@
                             <p class="name2">あすな</p>
                         </div>
                         <div class="portfolio_content">
-                            <p>1988年生まれ。群馬県出身。結婚を機に現在、長野県在住。<br />8年間歯科衛生士として歯科医院に勤務。<br />子供の頃からモノづくりが好きで仕事の傍らワイヤーを使ったハンドメイドアクセサリーを販売する活動をしていました。<br />その後、初めての出産とコロナ渦が重なり孤独な子育ての中、WEBで繋がれる世界に救われる。WEBを通して誰かと誰かをつなぐかけ橋になりたいと想いWEBデザイナーを目指す決意をしました。スクールでデザインを学び、たくさんのユーザーとお客様が繋がり、幸せになるお手伝いをしたいと思っています。
+                            <p>1988年生まれ。群馬県出身。結婚を機に現在、長野県在住。<br />8年間歯科衛生士として歯科医院に勤務。<br />子供の頃からモノづくりが好きで仕事の傍らワイヤーを使ったハンドメイドアクセサリーを販売する活動をしていました。その後、初めての出産とコロナ渦が重なり孤独な子育ての中、WEBで繋がれる世界に救われる。WEBを通して誰かと誰かをつなぐかけ橋になりたいと想いWEBデザイナーを目指す決意をしました。スクールでデザインを学び、たくさんのユーザーとお客様が繋がり、幸せになるお手伝いをしたいと思っています。
                             </p>
                         </div>
                     </div>
@@ -155,23 +175,23 @@
                         </div>
                     </div>
                     <div class="myfavorite_container">
-                        <div class="spa">
+                        <div class="myfavorite_icon">
                             <img src="images/SVG/spa_icon.svg" alt="温泉のアイコン">
                             <p class="mf_text1">温泉</p>
                             <p class="mf_text2">週末は肩こりを癒しに日帰り温泉へ行くのが好き。</p>
                         </div>
-                        <div class="camera">
+                        <div class="myfavorite_icon">
                             <img src="images/SVG/camera_icon.svg" alt="カメラのアイコン">
                             <p class="mf_text1">カメラ</p>
                             <p class="mf_text2">自然をとったり人物を撮るのも好き。富士フィルム派。</p>
                         </div>
-                        <div class="handmade">
+                        <div class="myfavorite_icon">
                             <img src="images/SVG/handmade_icon.svg" alt="工具のアイコン">
                             <p class="mf_text1">ハンドメイド</p>
                             <p class="mf_text2">手先を動かすのがとにかく好き。イヤーカフ、イヤリングを作ります。
                             </p>
                         </div>
-                        <div class="beer">
+                        <div class="myfavorite_icon">
                             <img src="images/SVG/beer_icon.svg" alt="ビールのアイコン">
                             <p class="mf_text1">お酒</p>
                             <p class="mf_text2">ビール、ワイン、日本酒飲みます。美味しいおつまみ探すのも好き。
@@ -203,6 +223,14 @@
             <p>©2025 ASU DESIGN</p>
         </footer>
     </main>
+    <script>
+        $(function () {
+            $('.sp_btn').on('click', function () {
+                $('.sp_btn').toggleClass('open');
+                $('.sp_nav').fadeToggle();
+            })
+        });
+    </script>
 </body>
 
 </html>

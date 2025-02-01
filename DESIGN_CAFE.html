@@ -62,6 +62,26 @@
                 </ul>
             </nav>
         </div>
+        <div class="sp_btn">
+            <span></span>
+            <p>MENU</p>
+        </div>
+        <nav class="sp_nav">
+            <ul class="sp_nav-menu">
+                <li>
+                    <a href="./index.html">HOME</a>
+                </li>
+                <li>
+                    <a href="./works.html">WORKS</a>
+                </li>
+                <li>
+                    <a href="./about.html">ABOUT</a>
+                </li>
+                <li>
+                    <a href="#contact">CONTACT</a>
+                </li>
+            </ul>
+        </nav>
     </header>
     <main>
         <div class="works_page_title">
@@ -173,6 +193,12 @@
         </footer>
     </main>
     <script>
+        $(function () {
+            $('.sp_btn').on('click', function () {
+                $('.sp_btn').toggleClass('open');
+                $('.sp_nav').fadeToggle();
+            })
+        })
         $('.works_btn').hover(
             function () {
                 $(this).find('a').text('もどる')

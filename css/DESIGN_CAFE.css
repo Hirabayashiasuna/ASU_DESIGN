@@ -54,3 +54,26 @@
     padding-left: 8px;
     font-size: 18px;
 }
+
+.sp_nav {
+    display: none;
+}
+
+@media screen and (max-width: 390px) {
+    .pre_mk_img {
+        margin-top: 57px;
+    }
+
+    .works_page_title p {
+        padding-bottom: 43px;
+    }
+
+    .cafe_url_text {
+        font-size: 16px;
+    }
+
+    .pre_memo {
+        margin: 13px;
+    }
+
+}

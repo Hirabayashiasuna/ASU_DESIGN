@@ -169,12 +169,13 @@
 
 @media screen and (max-width: 1100px) {
     #works_pre {
+        padding: 0 3%;
         flex-direction: column;
         align-items: center;
     }
 
     .works_pre_wrap {
-        width: 100%;
+        width: 90%;
     }
 
     .pre_mk_img {
@@ -298,9 +299,6 @@
         left: 60%;
     }
 
-    #works_pre {
-        padding: 0 3%;
-    }
 
     .pre_jg_img {
         display: none;
@@ -308,8 +306,7 @@
 
     .pre_memo {
         margin-top: 80px;
-        max-width: 934px;
-        width: 100%;
+        width: 90%;
         height: 100%;
     }
 
@@ -336,6 +333,22 @@
 
     .pre_title {
         font-size: 21px;
+    }
+
+
+}
+
+@media screen and (max-width: 390px) {
+    .pre_mk_img {
+        margin-top: 57px;
+    }
+
+    .works_page_title p {
+        padding-bottom: 43px;
+    }
+
+    .pre_memo_wrap {
+        width: 88%;
     }
 
 }
