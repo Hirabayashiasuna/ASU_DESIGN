@@ -23,7 +23,7 @@
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-    <script src="js/jquery.inview.min.js"></script>
+    <script src="./script/jquery.inview.min.js"></script>
 
 </head>
 
@@ -87,16 +87,28 @@
         </div>
     </header>
     <section id="top">
-        <div class="main_visual_pc">
-            <img src="images/SVG/fv_title.svg" alt="ASUNA PORTFOLIO">
-        </div>
-        <div class="main_visual_swich">
-            <label class="toggleButton">
-                <input type="checkbox" class="toggleButton__checkbox" checked />
-            </label>
-        </div>
-        <div class="swich_face">
-            <img src="images/SVG/fv_on_face.svg" alt="スイッチオンの笑顔">
+        <div class="main_visual_wrap">
+            <div class="main_title_inner">
+                <div class="main_title_on">
+                    <img src="images/SVG/fv_title.svg" alt="ASUNA PORTFOLIO">
+                </div>
+                <div class="main_title_off">
+                    <img src="images/SVG/fv_title_off.svg" alt="ASUNA PORTFOLIO">
+                </div>
+            </div>
+            <div class="swichOn_inner">
+                <div class="toggleButton_on">
+                    <span class="checkbox"></span>
+                </div>
+
+                <div class="swichOn_face">
+                    <img src="images/SVG/fv_on_face.svg" alt="スイッチオンの笑顔">
+                </div>
+                <div class="swichOff_face">
+                    <img src="images/SVG/fv_off_face.svg" alt="スイッチオフの顔">
+                </div>
+            </div>
+
         </div>
         <div class="loop_text">
             <ul>
@@ -125,12 +137,10 @@
                 </p>
             </div>
             <div class="concept_ling">
-                <div class="box_GREEN js-fadeUp">
-                    <span class="GREEN_ling"></span>
+                <div class="GREEN_Box inview fadeIn_left">
                     <span class="YELLOW_cicle1"></span>
                 </div>
-                <div class="box_RED js-fadeUp">
-                    <span class="RED_ling"></span>
+                <div class="RED_Box inview fadeIn_right">
                     <span class="YELLOW_cicle2"></span>
                 </div>
             </div>
@@ -348,9 +358,16 @@
         });
 
         // スクロールして表示領域に入ったらclass付与(コンセプトの円)
+        //$(function () {
+        //  $(".js-fadeUp1").on("inview", function () {
+        //    $(this).addClass("is-inview");
+        //});
+        //});
         $(function () {
-            $(".js-fadeUp").on("inview", function () {
-                $(this).addClass("is-inview");
+            $(".inview").on("inview", function (event, isInView) {
+                if (isInView) {
+                    $(this).stop().addClass("is-show");
+                }
             });
         });
 

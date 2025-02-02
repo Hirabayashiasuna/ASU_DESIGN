@@ -486,6 +486,10 @@
         justify-content: center;
     }
 
+    .myfavorite_icon {
+        width: 281px;
+    }
+
     #Footer {
         height: 571px;
     }
@@ -512,4 +516,7 @@
         height: 8px;
     }
 
+    .myfavorite_icon {
+        width: 281px;
+    }
 }
