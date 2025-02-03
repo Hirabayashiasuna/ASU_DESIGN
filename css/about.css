@@ -1,5 +1,13 @@
 @charset "uft-8";
 
+.html {
+    overflow-x: hidden;
+}
+
+.body {
+    overflow-x: hidden;
+}
+
 #profile {
     max-width: 1130px;
     margin: 0 auto;
@@ -15,6 +23,7 @@
 .profile_title p {
     text-align: center;
     font-size: 23px;
+
     color: #FC6349;
 }
 
@@ -79,7 +88,7 @@
 
 .profile_text {
     padding-left: 3%;
-    width: 588px;
+    max-width: 588px;
 }
 
 .profile_name {
@@ -100,7 +109,6 @@
 
 .portfolio_content p {
     max-width: 588px;
-    width: 100%;
     font-size: 16px;
     line-height: 1.87;
 }
@@ -379,7 +387,7 @@
     }
 
     .profile_text {
-        width: 488px;
+        max-width: 488px;
     }
 
     #important {
@@ -474,11 +482,6 @@
     }
 
     .profile_photo {
-        width: initial;
-    }
-
-    .portfolio_content p {
-        padding: 0 20px;
         width: initial;
     }
 

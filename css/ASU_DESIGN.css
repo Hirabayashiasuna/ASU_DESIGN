@@ -241,6 +241,10 @@
         z-index: 3;
     }
 
+    .modal::-webkit-scrollbar {
+        display: none;
+    }
+
     .modal-content {
         position: relative;
         margin: 0 auto;
@@ -248,10 +252,18 @@
         /* モーダルの幅 */
     }
 
+    .modal_pc {
+        width: 80%;
+    }
+
     .modal_img {
         margin: 100px 0;
         display: flex;
         justify-content: center;
+    }
+
+    .modal_img img {
+        width: 100%;
     }
 
     .modal_img p {
@@ -262,7 +274,7 @@
     /* モーダルを閉じるボタン（×）のスタイル */
     #pcClose,
     #spClose {
-        position: fixed;
+        position: sticky;
         /* モーダル内で絶対位置に配置 */
         display: flex;
         /* ボタン内のテキストが中央に配置されるようにフレックスボックスを使用 */
@@ -272,7 +284,7 @@
         /* ボタン内のテキストを横方向に中央揃え */
         top: 10%;
         /* モーダル内容の上部から離れた位置に配置 */
-        right: 16%;
+        left: 100%;
         /* モーダル内容の右端から離れた位置に配置 */
         font-size: 28px;
         /* 閉じるボタンのフォントサイズ */

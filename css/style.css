@@ -1,6 +1,11 @@
 @charset "uft-8";
 
+html {
+    overflow-x: hidden;
+}
+
 body {
+    overflow-x: hidden;
     background-color: #FCF7E0;
 }
 
@@ -125,61 +130,66 @@ a:hover span:nth-child(1) {
     align-items: center;
 }
 
-.main_title_on img {
+.main_title_inner {
     position: relative;
-    width: 848px;
-    height: 285px;
+    max-width: 848px;
+    width: 100%;
+    height: 100%;
+    aspect-ratio: 848 / 285;
 }
 
-.main_title_off img {
+.main_title_off img,
+.main_title_on img {
     position: absolute;
-    width: 848px;
-    height: 285px;
-    top: 26%;
-    right: 11.4%;
+    width: 100%;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
-
+.swichOn_inner {
+    position: absolute;
+    width: 32%;
+    top: 0;
+    right: 0;
+}
 
 .toggleButton_on {
-    position: absolute;
+    position: relative;
     display: block;
     max-width: 276px;
     width: 100%;
-    height: 120px;
-    top: 28%;
-    left: 60%;
+    height: 100%;
+    aspect-ratio: 275 / 119;
     border-radius: 60px;
     background-color: #fc6349;
-
 }
-
 
 .checkbox {
     position: absolute;
     top: 4%;
     left: 2%;
-    width: 110px;
-    height: 110px;
+    width: 40%;
+    aspect-ratio: 1;
     border-radius: 50%;
     background-color: #ffd63a;
 }
 
 .swichOn_face {
     position: absolute;
-    top: 35%;
-    left: 63%;
-    width: 38px;
-    height: 30px;
+    top: 50%;
+    left: 20%;
+    width: 14%;
     opacity: 0;
+    transform: translate(-50%, -50%);
 }
 
 .swichOff_face {
     position: absolute;
-    top: 35%;
-    left: 78%;
-    width: 38px;
-    height: 30px;
+    top: 50%;
+    left: 80%;
+    width: 14%;
+    transform: translate(-50%, -50%);
 }
 
 .loop_text {
@@ -256,6 +266,11 @@ a:hover span:nth-child(1) {
 /*コンセプトの円のオブジェクト*/
 
 .fadeIn_left {
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    top: 4%;
+    left: 2%;
     opacity: 0;
     transform: translate(-10%, 0);
     transition: 2s;
@@ -267,6 +282,11 @@ a:hover span:nth-child(1) {
 }
 
 .fadeIn_right {
+    position: absolute;
+    width: 284px;
+    height: 284px;
+    top: 65%;
+    right: 5%;
     opacity: 0;
     transform: translate(10%, 0);
     transition: 2s;
@@ -278,15 +298,10 @@ a:hover span:nth-child(1) {
 }
 
 .GREEN_Box {
-    position: absolute;
     display: block;
-    max-width: 320px;
-    max-height: 320px;
     width: 100%;
     height: 100%;
     border-radius: 50%;
-    top: 10%;
-    left: 2%;
     background: transparent;
     border: 25px solid #05c87a;
     animation: 7s linear infinite rotation1;
@@ -314,10 +329,7 @@ a:hover span:nth-child(1) {
 }
 
 .RED_Box {
-    position: absolute;
     display: block;
-    max-width: 284px;
-    max-height: 284px;
     width: 100%;
     height: 100%;
     border-radius: 50%;
@@ -803,7 +815,7 @@ textarea.c-form__input {
         z-index: 2;
     }
 
-    .sp_btn p {
+    /* .sp_btn p { 
         display: block;
         text-align: center;
         font-size: 9px;
@@ -812,7 +824,7 @@ textarea.c-form__input {
         position: relative;
         top: 55%;
     }
-
+*/
     .sp_btn span {
         display: block;
         width: 20px;
@@ -821,7 +833,7 @@ textarea.c-form__input {
         border-radius: 2px;
         /*位置の調整*/
         position: relative;
-        top: 35%;
+        top: 45%;
         left: 50%;
         transition: 0.3s;
         transform: translateX(-50%);
@@ -843,11 +855,11 @@ textarea.c-form__input {
     }
 
     .sp_btn span::before {
-        bottom: 6px;
+        bottom: 8px;
     }
 
     .sp_btn span::after {
-        top: 6px;
+        top: 8px;
     }
 
     /*バツ印*/
@@ -887,6 +899,15 @@ textarea.c-form__input {
         gap: 40px;
     }
 
+    /* コンセプトの円の調節 */
+    .fadeIn_left {
+        left: -6%;
+    }
+
+    .fadeIn_right {
+        right: 1%;
+    }
+
     .sp_nav ul li {
         color: #72716E;
         font-size: 18px;
@@ -924,6 +945,18 @@ textarea.c-form__input {
     .sp_br {
         display: block;
     }
+
+    .fadeIn_right {
+        width: 234px;
+        height: 234px;
+        right: -4%;
+    }
+
+    .YELLOW_cicle2 {
+        max-width: 62px;
+        max-height: 62px;
+    }
+
 }
 
 @media screen and (max-width: 767px) {
@@ -954,129 +987,146 @@ textarea.c-form__input {
         font-size: 17px;
     }
 
-    #skill_works {
-        height: 2702px;
+    .fadeIn_right {
+        width: 152px;
+        height: 152px;
+        top: 78%;
+        right: -3%;
     }
 
-    .skill_title h2 {
-        padding-top: 160px;
+    .RED_Box {
+        border: 12px solid #fc6349;
     }
 
-    .skill_inner {
-        max-width: 345px;
-        margin: 0 auto;
-        flex-direction: column;
-        gap: 40px;
+    .YELLOW_cicle2 {
+        max-width: 34px;
+        max-height: 34px;
     }
+}
+
+#skill_works {
+    height: 2702px;
+}
+
+.skill_title h2 {
+    padding-top: 160px;
+}
+
+.skill_inner {
+    max-width: 345px;
+    margin: 0 auto;
+    flex-direction: column;
+    gap: 40px;
+}
 
 
-    .skill_design,
-    .skill_coding {
-        margin-right: 0;
-        width: 100%;
-        height: 550px;
-    }
+.skill_design,
+.skill_coding {
+    margin-right: 0;
+    width: 100%;
+    height: 550px;
+}
 
-    .skill_inner h3 {
-        font-size: 22px;
-    }
+.skill_inner h3 {
+    font-size: 22px;
+}
 
-    .skill_inner img {
-        width: 117px;
-    }
+.skill_inner img {
+    width: 117px;
+}
 
-    .skill_inner p {
-        font-size: 15px;
-    }
+.skill_inner p {
+    font-size: 15px;
+}
 
-    .skill_coding ul {
-        padding-top: 3%;
-    }
+.skill_coding ul {
+    padding-top: 3%;
+}
 
-    .skill_coding ul,
-    .skill_design ul {
-        padding-top: 5%;
-    }
+.skill_coding ul,
+.skill_design ul {
+    padding-top: 5%;
+}
 
-    .about_btn {
-        position: relative;
-        margin: 0 auto;
-        max-width: 365px;
-        height: 652px;
-        background-color: #fc6349;
-        border-radius: 246px;
-    }
+.about_btn {
+    position: relative;
+    margin: 0 auto;
+    max-width: 365px;
+    height: 652px;
+    background-color: #fc6349;
+    border-radius: 246px;
+}
 
-    .about_btn_inner {
-        display: block;
-    }
+.about_btn_inner {
+    display: block;
+}
 
-    .about_text1 {
-        padding-top: 22px;
-        text-align: center;
-        font-size: 20px;
-    }
+.about_text1 {
+    padding-top: 22px;
+    text-align: center;
+    font-size: 20px;
+}
 
-    .about_text2 {
-        text-align: center;
-    }
+.about_text2 {
+    text-align: center;
+}
 
-    .contact_wrap {
-        height: 1442px;
-    }
+.contact_wrap {
+    height: 1442px;
+}
 
-    #contact h2 {
-        width: 243px;
-    }
+#contact h2 {
+    width: 243px;
+}
 
-    .contact_title p {
-        padding-bottom: 46px;
-        font-size: 16px;
-    }
+.contact_title p {
+    padding-bottom: 46px;
+    font-size: 16px;
+}
 
 
-    .contact_text {
-        padding: 0 46px 65px 46px;
-        font-size: 16px;
-    }
+.contact_text {
+    padding: 0 46px 65px 46px;
+    font-size: 16px;
+}
 
-    .c-form__item {
-        margin: 0 24px 40px 24px;
-    }
+.c-form__item {
+    margin: 0 24px 40px 24px;
+}
 
-    textarea.c-form__input {
-        height: 260px;
-    }
+textarea.c-form__input {
+    height: 260px;
+}
 
-    #Footer {
-        height: 571px;
-    }
+#Footer {
+    height: 571px;
+}
 
-    .footer-wrap {
-        flex-direction: column;
-    }
+.footer-wrap {
+    flex-direction: column;
+}
 
-    .footer-logo {
-        padding-bottom: 92px;
-        order: 2;
-    }
+.footer-logo {
+    padding-bottom: 92px;
+    order: 2;
+}
 
-    .footer-list {
-        order: 1;
-    }
+.footer-list {
+    order: 1;
+}
 
-    .footer-list ul {
-        padding: 68px;
-        order: 3;
-        flex-direction: column;
-        align-items: center;
-        width: 362px;
-        height: 190px;
-    }
+.footer-list ul {
+    padding: 68px;
+    order: 3;
+    flex-direction: column;
+    align-items: center;
+    width: 362px;
+    height: 190px;
+}
 
-    #Footer p {
-        text-align: center;
-    }
+#Footer p {
+    text-align: center;
+}
 }
 
 
@@ -1100,6 +1150,10 @@ textarea.c-form__input {
 @media screen and (max-width: 390px) {
     #Header h1 {
         width: 148px;
+    }
+
+    .concept_text {
+        padding-bottom: 182px;
     }
 
     .catch_1 {
@@ -1153,6 +1207,10 @@ textarea.c-form__input {
         padding-bottom: 38px;
         font-size: 16px;
 
+    }
+
+    #about {
+        padding-bottom: 110px;
     }
 
     .about_title h2 {

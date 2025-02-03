@@ -150,7 +150,7 @@
 
     /* モーダルを閉じるボタン（×）のスタイル */
     #pcClose {
-        position: fixed;
+        position: sticky;
         /* モーダル内で絶対位置に配置 */
         display: flex;
         /* ボタン内のテキストが中央に配置されるようにフレックスボックスを使用 */
