@@ -32,7 +32,9 @@
 }
 
 .life_jg_pc img {
-    width: 449px;
+    padding-top: 55px;
+    width: 636px;
+
 }
 
 .life_memo {
@@ -130,6 +132,10 @@
         z-index: 3;
     }
 
+    .modal::-webkit-scrollbar {
+        display: none;
+    }
+
     .modal-content {
         position: relative;
         margin: 0 auto;
@@ -190,5 +196,11 @@
         margin-top: 80px;
         width: 90%;
         height: 100%;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .life_mk_img {
+        margin-top: 57px;
     }
 }

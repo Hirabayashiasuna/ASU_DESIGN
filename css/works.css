@@ -230,6 +230,10 @@
 }
 
 @media screen and (max-width: 1100px) {
+    #Header {
+        padding-bottom: 0;
+    }
+
     #website {
         max-width: 912px;
     }
@@ -325,6 +329,7 @@
 }
 
 @media screen and (max-width: 390px) {
+
     .works_page_title h2 {
         width: 186px;
     }

@@ -60,7 +60,6 @@
 .pre_memo {
     margin-top: 127px;
     width: 384px;
-    scrollbar-width: none;
     height: 897px;
     border-radius: 40px;
     border: 3px solid #FFD63A;
@@ -169,7 +168,7 @@
 
 @media screen and (max-width: 1100px) {
     #works_pre {
-        padding: 0 3%;
+        padding: 0 30px;
         flex-direction: column;
         align-items: center;
     }
@@ -308,7 +307,8 @@
 
     #spClose {
         position: fixed;
-        left: 60%;
+        left: 58%;
+        top: 6%;
     }
 
 
@@ -323,13 +323,21 @@
     }
 
     .pre_memo_wrap {
-        width: 93%;
+        width: 90%;
     }
 }
 
 @media screen and (max-width: 767px) {
+    .pre_mk_img {
+        margin-top: 57px;
+    }
+
     #openModal {
         width: initial;
+    }
+
+    #spClose {
+        left: 64%;
     }
 
     .modal_pcbtn,
