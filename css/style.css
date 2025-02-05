@@ -570,6 +570,7 @@ a:hover span:nth-child(1) {
     width: 100%;
     height: 100%;
     aspect-ratio: 1 / 1;
+    transition: 0.8s;
 }
 
 .about_btn img {
@@ -607,12 +608,25 @@ a:hover span:nth-child(1) {
     color: #FFFCEE;
 }
 
+
 .about_text2 {
     max-width: 486px;
     font-size: 18px;
     color: #FFFCEE;
     line-height: 1.94;
 }
+
+.about_btn:hover .about_check_btn {
+    transform: translateX(170%);
+}
+
+.about_btn:hover {
+    background-color: #05c87a;
+    border-color: #ffd63a;
+    border-radius: 246px;
+}
+
+
 
 /*ここからコンタクトページ*/
 #contact {
@@ -797,6 +811,11 @@ textarea.c-form__input {
         padding-bottom: 100px;
     }
 
+    .Header_wrap {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
     .logo {
         z-index: 2;
     }
@@ -807,8 +826,8 @@ textarea.c-form__input {
 
     .sp_btn {
         display: block;
-        width: 54px;
-        height: 54px;
+        width: 52px;
+        height: 52px;
         border-radius: 50%;
         background-color: #FFFCEE;
         border: 3px solid #FFD63A;
@@ -879,7 +898,7 @@ textarea.c-form__input {
         width: 100%;
         height: 100vh;
         /*デバイスの高さ*/
-        background: #FFFCEE;
+        background: #FCF7E0;
         /*重なり具合の調整*/
         z-index: 1;
     }
@@ -889,7 +908,7 @@ textarea.c-form__input {
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        height: 80%;
+        height: 75%;
         gap: 40px;
     }
 
@@ -913,7 +932,7 @@ textarea.c-form__input {
     }
 
     .skill_wrap {
-        padding: 0 3%;
+        padding: 0 20px;
     }
 
     .mk_box img {
@@ -970,6 +989,11 @@ textarea.c-form__input {
         max-height: 58px;
     }
 
+    .contact_wrap {
+        border-radius: 70px;
+    }
+
+
 }
 
 @media screen and (max-width: 768px) {
@@ -990,6 +1014,7 @@ textarea.c-form__input {
     .loop_text ul li {
         font-size: 22px;
     }
+
 
     #concept {
         margin: 0 auto;
@@ -1067,6 +1092,7 @@ textarea.c-form__input {
     }
 
     .skill_inner p {
+        padding: 0 11%;
         font-size: 15px;
     }
 
@@ -1074,9 +1100,12 @@ textarea.c-form__input {
         padding-top: 3%;
     }
 
-    .skill_coding ul,
     .skill_design ul {
         padding-top: 5%;
+    }
+
+    .skill_coding ul {
+        padding-top: 10%;
     }
 
     .about_btn {
@@ -1103,8 +1132,8 @@ textarea.c-form__input {
     }
 
     #contact {
-        padding-left: 30px;
-        padding-right: 30px;
+        padding-left: 20px;
+        padding-right: 20px;
     }
 
     .contact_wrap {
@@ -1139,6 +1168,7 @@ textarea.c-form__input {
     }
 
     .footer-wrap {
+        padding-top: 28px;
         flex-direction: column;
     }
 
@@ -1185,7 +1215,7 @@ textarea.c-form__input {
 
 @media screen and (max-width: 390px) {
     #Header {
-        padding-bottom: 160px;
+        padding-bottom: 130px;
     }
 
     #Header h1 {
@@ -1226,6 +1256,7 @@ textarea.c-form__input {
     }
 
     .skill_inner h3 {
+        padding-top: 82px;
         font-size: 22px;
     }
 
@@ -1238,7 +1269,7 @@ textarea.c-form__input {
     }
 
     .skill_coding ul {
-        padding-top: 5%;
+        padding-top: 24px;
     }
 
     #works h2 {
@@ -1254,7 +1285,7 @@ textarea.c-form__input {
     }
 
     #about {
-        padding: 0 30px 110px 30px;
+        padding: 0 20px 110px 20px;
         padding-bottom: 110px;
     }
 
@@ -1306,16 +1337,16 @@ textarea.c-form__input {
 }
 
 .mk_box img {
-    padding-top: 16px;
-    padding-left: 20px;
+    padding-top: 5%;
+    padding-left: 6%;
     width: 92%;
     height: 89%;
     object-fit: cover;
 }
 
 .mk_box2 img {
-    padding-top: 16px;
-    padding-left: 14px;
+    padding-top: 5%;
+    padding-left: 4%;
     width: 92%;
     height: 89%;
     object-fit: cover;

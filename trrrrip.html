@@ -155,7 +155,7 @@
         </section>
         <div class="works_btn">
             <div>
-                <p><a href="./index.html">BACK</a></p>
+                <p><a href="./works.html">BACK</a></p>
             </div>
 
             <div class="check_btn">
@@ -184,6 +184,12 @@
         </footer>
     </main>
     <script>
+        $(function () {
+            $('.sp_btn').on('click', function () {
+                $('.sp_btn').toggleClass('open');
+                $('.sp_nav').fadeToggle();
+            })
+        })
         $('.works_btn').hover(
             function () {
                 $(this).find('a').text('もどる')

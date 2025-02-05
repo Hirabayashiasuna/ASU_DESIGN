@@ -63,12 +63,32 @@
                     </li>
                 </ul>
             </nav>
+            <div class="sp_btn">
+                <span></span>
+            </div>
+            <nav class="sp_nav">
+                <ul class="sp_nav-menu">
+                    <li>
+                        <a href="./index.html">HOME</a>
+                    </li>
+                    <li>
+                        <a href="./works.html">WORKS</a>
+                    </li>
+                    <li>
+                        <a href="./about.html">ABOUT</a>
+                    </li>
+                    <li>
+                        <a href="./index.html#contact">CONTACT</a>
+                    </li>
+                </ul>
+            </nav>
         </div>
     </header>
     <main>
         <section id="thankspage">
             <img src="images/SVG/pc_thanks.svg" alt="サンクスの文字">
-            <p>お問い合わせの受付が完了しました。<br />この度はお問い合わせいただき誠にありがとうございます。<br />内容を確認後、折り返しのご連絡をさせていただきますので<br />今しばらくお待ちくださいませ。
+            <p>お問い合わせの受付が完了しました。<br /><br class="sp_br">この度はお問い合わせいただき誠に<br class="sp_br">ありがとうございます。<br /><br
+                    class="sp_br">内容を確認後、折り返しのご連絡を<br class="sp_br">させていただきますので<br /><br class="sp_br">今しばらくお待ちくださいませ。
             </p>
             <div class="thanks_btn">
                 <div>
@@ -88,22 +108,26 @@
                             <img src="images/SVG/logo_footer.svg" alt="白のASU DESIGNのロゴ">
                         </a>
                     </h1>
-
                 </div>
                 <div class="footer-list">
                     <ul>
                         <li><a href="./index.html">HOME</a></li>
                         <li><a href="./works.html">WORKS</a></li>
                         <li><a href="./about.html">ABOUT</a></li>
-                        <li><a href="./index.html #contact">CONTACT</a></li>
+                        <li><a href="./index.html#contact">CONTACT</a></li>
                     </ul>
                 </div>
             </div>
-
             <p>©2025 ASU DESIGN</p>
         </footer>
     </main>
     <script>
+        $(function () {
+            $('.sp_btn').on('click', function () {
+                $('.sp_btn').toggleClass('open');
+                $('.sp_nav').fadeToggle();
+            })
+        })
         $('.thanks_btn').hover(
             function () {
                 $(this).find('a').text('もどる')

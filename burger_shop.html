@@ -197,6 +197,12 @@
         </footer>
     </main>
     <script>
+        $(function () {
+            $('.sp_btn').on('click', function () {
+                $('.sp_btn').toggleClass('open');
+                $('.sp_nav').fadeToggle();
+            })
+        })
         $('.works_btn').hover(
             function () {
                 $(this).find('a').text('もどる')
