@@ -11,6 +11,26 @@ body {
 
 #Header {
     width: 100%;
+    opacity: 0;
+    animation-name: fadein;
+    animation-duration: 0.5s;
+    animation-delay: 3.8s;
+    animation-fill-mode: forwards;
+    /* position: sticky; */
+    /* position: -webkit-sticky; */
+    /* top: 0; */
+}
+
+@keyframes fadein {
+    0% {
+        opacity: 0;
+        transform: translateY(0);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(20px);
+    }
 }
 
 .Header_wrap {
@@ -307,13 +327,35 @@ a:hover span:nth-child(1) {
     white-space: nowrap;
     margin-top: 100px;
     z-index: 1;
+    opacity: 0;
+    animation-name: loop_textColor;
+    animation-duration: 0.5s;
+    animation-delay: 3.8s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes loop_textColor {
+    0% {
+        opacity: 0;
+    }
+
+    20% {
+        transition: 0.5s;
+    }
+
+    100% {
+        opacity: 1;
+    }
 }
 
 .loop_text ul {
-    animation: flowing 50s linear infinite;
     transform: translateX(100%);
     margin: 0;
     padding: 0;
+    animation-name: flowing;
+    animation-duration: 50s;
+    animation-delay: 3.8s;
+    animation-fill-mode: linear infinite;
 }
 
 .loop_text ul li {
@@ -1041,7 +1083,7 @@ textarea.c-form__input {
     }
 
     .main_visual_wrap {
-        padding: 15% 8%;
+        padding: 14% 7%;
     }
 
     /* コンセプトの円の調節 */
@@ -1075,8 +1117,9 @@ textarea.c-form__input {
         width: 65%;
     }
 
+    /*スマホ版のホバーを無効にする*/
     .a.works_btn:hover .check_btn {
-        transform: translateX(0px);
+        transform: none;
     }
 
     .works_btn:hover {
@@ -1093,6 +1136,7 @@ textarea.c-form__input {
         font-size: 16px;
     }
 
+    /*スマホ版のホバーを無効にする
     .about_btn:hover .about_check_btn {
         transform: translateX(0%);
     }
@@ -1102,7 +1146,7 @@ textarea.c-form__input {
         border-color: #fc6349;
         border-radius: 246px;
     }
-
+    */
 
 }
 
@@ -1375,7 +1419,7 @@ textarea.c-form__input {
 
 @media screen and (max-width: 390px) {
     #Header {
-        padding-bottom: 130px;
+        padding-bottom: 140px;
     }
 
     #Header h1 {
@@ -1383,7 +1427,7 @@ textarea.c-form__input {
     }
 
     .loop_text {
-        margin-top: 140px;
+        margin-top: 160px;
     }
 
     .concept_text {

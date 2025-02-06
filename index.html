@@ -361,12 +361,7 @@
             })
         });
 
-        // スクロールして表示領域に入ったらclass付与(コンセプトの円)
-        //$(function () {
-        //  $(".js-fadeUp1").on("inview", function () {
-        //    $(this).addClass("is-inview");
-        //});
-        //});
+        //コンセプトの円//
         $(function () {
             $(".inview").on("inview", function (event, isInView) {
                 if (isInView) {
@@ -407,9 +402,18 @@
             ]
         });
 
-        if (!navigator.userAgent.match(/(iPhone|iPad|iPod|Android)/)) {
-            //ここに書いた処理はスマホ閲覧時は無効となる
-
+        if (window.matchMedia('(max-width: 1100px)').matches) {
+            //スマホ処理
+            //$('.works_btn').hover(
+            // function () {
+            //   $(this).find('').text('')
+            //},
+            //function () {
+            //  $(this).find('a').text('MORE')
+            //}
+            // );
+        } else if (window.matchMedia('(min-width:1100px)').matches) {
+            //PC処理
             $('.works_btn').hover(
                 function () {
                     $(this).find('a').text('もっと!')
@@ -418,17 +422,17 @@
                     $(this).find('a').text('MORE')
                 }
             );
-
-
-            $('.c-form__submit').hover(
-                function () {
-                    $(this).find('button').text('送る')
-                },
-                function () {
-                    $(this).find('button').text('SEND')
-                }
-            );
         };
+
+        $('.c-form__submit').hover(
+            function () {
+                $(this).find('button').text('送る')
+            },
+            function () {
+                $(this).find('button').text('SEND')
+            }
+        );
+
     </script>
 
 </body>
