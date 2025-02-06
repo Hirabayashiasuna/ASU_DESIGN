@@ -407,30 +407,28 @@
             ]
         });
 
-        $('.works_btn').hover(
-            function () {
-                $(this).find('a').text('もっと!')
-            },
-            function () {
-                $(this).find('a').text('MORE')
-            }
-        );
-        // $('.about_btn').hover(
-        // function () {
-        //   $(this).find('about_text_box').text('もっと詳しく知りたい！')
-        //},
-        //function () {
-        //   $(this).find('about_text_box').text()
-        //  }
-        //);
-        $('.c-form__submit').hover(
-            function () {
-                $(this).find('button').text('送る')
-            },
-            function () {
-                $(this).find('button').text('SEND')
-            }
-        )
+        if (!navigator.userAgent.match(/(iPhone|iPad|iPod|Android)/)) {
+            //ここに書いた処理はスマホ閲覧時は無効となる
+
+            $('.works_btn').hover(
+                function () {
+                    $(this).find('a').text('もっと!')
+                },
+                function () {
+                    $(this).find('a').text('MORE')
+                }
+            );
+
+
+            $('.c-form__submit').hover(
+                function () {
+                    $(this).find('button').text('送る')
+                },
+                function () {
+                    $(this).find('button').text('SEND')
+                }
+            );
+        };
     </script>
 
 </body>

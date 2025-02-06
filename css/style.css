@@ -730,7 +730,6 @@ a:hover span:nth-child(1) {
 
 .about_btn:hover {
     background-color: #05c87a;
-    border-color: #ffd63a;
     border-radius: 246px;
 }
 
@@ -1076,12 +1075,32 @@ textarea.c-form__input {
         width: 65%;
     }
 
+    .a.works_btn:hover .check_btn {
+        transform: translateX(0px);
+    }
+
+    .works_btn:hover {
+        background-color: #fc6349;
+
+        border-radius: 25px;
+    }
+
     .about_text1 {
         font-size: 30px;
     }
 
     .about_text2 {
         font-size: 16px;
+    }
+
+    .about_btn:hover .about_check_btn {
+        transform: translateX(0%);
+    }
+
+    .about_btn:hover {
+        background-color: #fc6349;
+        border-color: #fc6349;
+        border-radius: 246px;
     }
 
 
@@ -1266,6 +1285,10 @@ textarea.c-form__input {
 
     .about_text2 {
         text-align: center;
+    }
+
+    .about_more {
+        display: none;
     }
 
     #contact {
