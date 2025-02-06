@@ -47,6 +47,10 @@
     background-color: #FFFCEE;
 }
 
+.pre_jg_pc img {
+    width: 426px;
+}
+
 .pre_jg_sp {
     display: flex;
     justify-content: center;
@@ -55,6 +59,10 @@
     height: 2132px;
     border-radius: 12px;
     background-color: #FFFCEE;
+}
+
+.pre_jg_sp img {
+    width: 133px;
 }
 
 .pre_memo {
@@ -168,7 +176,6 @@
 
 @media screen and (max-width: 1100px) {
     #works_pre {
-        padding: 0 30px;
         flex-direction: column;
         align-items: center;
     }
@@ -255,6 +262,7 @@
         width: 80%;
     }
 
+
     .modal_img {
         margin: 100px 0;
         display: flex;
@@ -307,7 +315,7 @@
 
     #spClose {
         position: fixed;
-        left: 58%;
+        left: 65%;
         top: 6%;
     }
 
@@ -337,7 +345,7 @@
     }
 
     #spClose {
-        left: 64%;
+        left: 78%;
     }
 
     .modal_pcbtn,
