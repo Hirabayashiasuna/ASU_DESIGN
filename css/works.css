@@ -1,5 +1,11 @@
 @charset "uft-8";
 
+#Header {
+    opacity: 1;
+    animation: none;
+
+}
+
 .works_page_title h2 {
     padding-top: 90px;
     padding-bottom: 10px;
