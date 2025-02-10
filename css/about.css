@@ -8,13 +8,19 @@
     overflow-x: hidden;
 }
 
+#Header {
+    opacity: 1;
+    animation: none;
+
+}
+
 #profile {
     max-width: 1130px;
     margin: 0 auto;
 }
 
 .profile_title h2 {
-    padding-top: 90px;
+    padding-top: 210px;
     padding-bottom: 10px;
     margin: 0 auto;
     width: 279px;
@@ -478,7 +484,7 @@
     }
 
     .profile_title h2 {
-        padding-top: 0;
+        padding-top: 128px;
         width: 177px;
     }
 

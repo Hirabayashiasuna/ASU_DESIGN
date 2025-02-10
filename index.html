@@ -20,15 +20,18 @@
                 h = d.documentElement, t = setTimeout(function () { h.className = h.className.replace(/\bwf-loading\b/g, "") + " wf-inactive"; }, config.scriptTimeout), tk = d.createElement("script"), f = false, s = d.getElementsByTagName("script")[0], a; h.className += " wf-loading"; tk.src = 'https://use.typekit.net/' + config.kitId + '.js'; tk.async = true; tk.onload = tk.onreadystatechange = function () { a = this.readyState; if (f || a && a != "complete" && a != "loaded") return; f = true; clearTimeout(t); try { Typekit.load(config) } catch (e) { } }; s.parentNode.insertBefore(tk, s)
         })(document);
     </script>
-
+    <script src="https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs" type="module"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
     <script src="./script/jquery.inview.min.js"></script>
 </head>
 
 <body>
+
+
     <header id="Header">
         <div class="Header_wrap">
+
             <div class="logo">
                 <h1>
                     <a href="./index.html">
@@ -147,6 +150,7 @@
                 </div>
             </div>
         </section>
+
         <section id="skill_works">
             <div class="skill_wrap">
                 <div class="skill_title">
@@ -359,6 +363,44 @@
                 $('.sp_btn').toggleClass('open');
                 $('.sp_nav').fadeToggle();
             })
+            var touch = 'ontouchstart' in document.documentElement
+                || navigator.maxTouchPoints > 0
+                || navigator.msMaxTouchPoints > 0;
+
+            if (touch) { // remove all :hover stylesheets
+                try { // prevent exception on browsers not supporting DOM styleSheets properly
+                    // for (var si in document.styleSheets) {
+                    var styleSheet = document.styleSheets[3];
+                    // if (!styleSheet.rules) continue;
+
+                    for (var ri = styleSheet.rules.length - 1; ri >= 0; ri--) {
+                        if (!styleSheet.rules[ri].selectorText) continue;
+
+                        if (styleSheet.rules[ri].selectorText.match(':hover')) {
+                            styleSheet.deleteRule(ri);
+                        }
+                    }
+                    //}
+                } catch (ex) { }
+            } else {
+                $('.works_btn').hover(
+                    function () {
+                        $(this).find('a').text('もっと!')
+                    },
+                    function () {
+                        $(this).find('a').text('MORE')
+                    }
+                );
+
+                $('.c-form__submit').hover(
+                    function () {
+                        $(this).find('button').text('送る')
+                    },
+                    function () {
+                        $(this).find('button').text('SEND')
+                    }
+                );
+            }
         });
 
         //コンセプトの円//
@@ -403,44 +445,6 @@
         });
 
 
-        $('.works_btn').hover(
-            function () {
-                $(this).find('a').text('もっと!')
-            },
-            function () {
-                $(this).find('a').text('MORE')
-            }
-        );
-
-        $('.c-form__submit').hover(
-            function () {
-                $(this).find('button').text('送る')
-            },
-            function () {
-                $(this).find('button').text('SEND')
-            }
-        );
-
-        var touch = 'ontouchstart' in document.documentElement
-            || navigator.maxTouchPoints > 0
-            || navigator.msMaxTouchPoints > 0;
-
-        if (touch) { // remove all :hover stylesheets
-            try { // prevent exception on browsers not supporting DOM styleSheets properly
-                for (var si in document.styleSheets) {
-                    var styleSheet = document.styleSheets[si];
-                    if (!styleSheet.rules) continue;
-
-                    for (var ri = styleSheet.rules.length - 1; ri >= 0; ri--) {
-                        if (!styleSheet.rules[ri].selectorText) continue;
-
-                        if (styleSheet.rules[ri].selectorText.match(':hover')) {
-                            styleSheet.deleteRule(ri);
-                        }
-                    }
-                }
-            } catch (ex) { }
-        }
     </script>
 
 </body>

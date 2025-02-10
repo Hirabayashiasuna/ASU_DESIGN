@@ -7,7 +7,7 @@
 }
 
 .works_page_title h2 {
-    padding-top: 90px;
+    padding-top: 210px;
     padding-bottom: 10px;
     margin: 0 auto;
     width: 293px;
@@ -240,6 +240,10 @@
         padding-bottom: 0;
     }
 
+    .works_page_title h2 {
+        padding-top: 130px;
+    }
+
     #website {
         max-width: 912px;
     }
@@ -290,6 +294,10 @@
 }
 
 @media screen and (max-width: 767px) {
+    .works_page_title h2 {
+        width: 186px;
+    }
+
     .category_title {
         margin-left: 8%;
         width: 140px;
@@ -336,9 +344,7 @@
 
 @media screen and (max-width: 390px) {
 
-    .works_page_title h2 {
-        width: 186px;
-    }
+
 
     .works_page_title p {
         font-size: 16px;

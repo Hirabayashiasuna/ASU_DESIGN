@@ -263,6 +263,10 @@
         width: 80%;
     }
 
+    .modal_sp {
+        width: 30%;
+    }
+
 
     .modal_img {
         margin: 100px 0;
@@ -345,9 +349,7 @@
         width: initial;
     }
 
-    #spClose {
-        left: 78%;
-    }
+
 
     .modal_pcbtn,
     .modal_sppbtn {
@@ -358,6 +360,11 @@
         padding-left: 25px;
         font-size: 15px;
         line-height: 44px;
+    }
+
+    .modal_img p {
+        padding-bottom: 10px;
+        font-size: 14px;
     }
 
     .pre_title {
@@ -374,6 +381,10 @@
 
     .works_page_title p {
         padding-bottom: 43px;
+    }
+
+    .modal_sp {
+        width: 40%;
     }
 
     .pre_memo_wrap {
