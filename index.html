@@ -27,8 +27,6 @@
 </head>
 
 <body>
-
-
     <header id="Header">
         <div class="Header_wrap">
 
@@ -357,8 +355,8 @@
         onload="if(submitted){window.location='./thanks.html';}"></iframe>
 
     <script>
-        setTimeout(() => document.body.style.overflow = "height:0", 3800);
-
+        //setTimeout(() => document.body.style.overflow = "hidden", 3800);
+        setTimeout(() => document.body.classList.add("hidden-scroll"), 3800);
         $(function () {
             $('.sp_btn').on('click', function () {
                 $('.sp_btn').toggleClass('open');

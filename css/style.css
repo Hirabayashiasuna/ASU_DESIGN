@@ -1,7 +1,7 @@
 @charset "uft-8";
 
 html {
-    /* overflow-x: hidden; */
+    overflow-x: hidden;
     overflow: hidden;
 }
 
@@ -12,7 +12,10 @@ body {
 
 }
 
-
+.hidden-scroll {
+    overflow: hidden;
+    /* スクロールを無効化 */
+}
 
 #Header {
     width: 100%;
