@@ -1,11 +1,17 @@
 @charset "uft-8";
 
+#Header {
+    opacity: 1;
+    animation: none;
+
+}
+
 #thankspage {
     text-align: center;
 }
 
 #thankspage img {
-    padding-top: 120px;
+    padding-top: 220px;
     padding-bottom: 64px;
     max-width: 723px;
     width: 100%;
@@ -107,7 +113,6 @@
 
 @media screen and (max-width: 768px) {
     #thankspage img {
-        padding-top: 0;
         width: 88%;
     }
 
@@ -153,5 +158,11 @@
 
     #Footer p {
         text-align: center;
+    }
+}
+
+@media screen and (max-width: 390px) {
+    #thankspage img {
+        padding-top: 180px;
     }
 }
