@@ -321,7 +321,7 @@ a:hover span:nth-child(1) {
     background: #ffd63a;
     display: flex;
     height: 75px;
-    line-height: 40px;
+
     overflow: hidden;
     width: 100%;
     white-space: nowrap;
@@ -510,6 +510,7 @@ a:hover span:nth-child(1) {
 /*ここからスキル＆ワークス*/
 
 #skill_works {
+    margin: 0 auto;
     max-width: 1366px;
     width: 100%;
     height: 2102px;
@@ -1224,7 +1225,7 @@ textarea.c-form__input {
 
     .loop_text {
         height: 50px;
-        line-height: 40px;
+
 
     }
 
