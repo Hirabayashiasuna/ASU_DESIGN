@@ -1373,19 +1373,6 @@ textarea.c-form__input {
         text-align: center;
     }
 
-
-
-    .about_btn:hover .about_check_btn {
-        transform: translatey(78%);
-    }
-
-    .about_more {
-        top: 5%;
-        width: 100%;
-        height: 50%;
-        font-size: 30px;
-    }
-
     #contact {
         padding-left: 20px;
         padding-right: 20px;
