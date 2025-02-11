@@ -254,7 +254,9 @@
                             </a>
 
                             <div class="click_text">
-                                <img src="images/SVG/pc_about_cliclme.svg" alt="英語でクリックミーの文字">
+                                <a href="./about.html">
+                                    <img src="images/SVG/pc_about_cliclme.svg" alt="英語でクリックミーの文字">
+                                </a>
                             </div>
                         </div>
                         <div class="about_text_box">
@@ -356,7 +358,7 @@
 
     <script>
         //setTimeout(() => document.body.style.overflow = "hidden", 3800);
-        setTimeout(() => document.body.classList.add("hidden-scroll"), 3800);
+        //setTimeout(() => document.body.classList.add("hidden-scroll"), 3800);
         $(function () {
             $('.sp_btn').on('click', function () {
                 $('.sp_btn').toggleClass('open');
@@ -442,6 +444,23 @@
                 },
             ]
         });
+        $('.works_btn').hover(
+            function () {
+                $(this).find('a').text('もっと!')
+            },
+            function () {
+                $(this).find('a').text('MORE')
+            }
+        );
+
+        $('.c-form__submit').hover(
+            function () {
+                $(this).find('button').text('送る')
+            },
+            function () {
+                $(this).find('button').text('SEND')
+            }
+        );
 
 
     </script>
