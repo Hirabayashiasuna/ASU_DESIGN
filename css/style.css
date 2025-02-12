@@ -1543,10 +1543,6 @@ textarea.c-form__input {
         font-size: 16px;
     }
 
-    .about_btn:hover .about_check_btn {
-        transform: translatey(100%);
-    }
-
 }
 
 
