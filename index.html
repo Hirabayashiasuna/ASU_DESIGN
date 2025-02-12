@@ -26,7 +26,7 @@
     <script src="./script/jquery.inview.min.js"></script>
 </head>
 
-<body>
+<body class="hidden-scroll">
     <header id="Header">
         <div class="Header_wrap">
 
@@ -357,9 +357,13 @@
         onload="if(submitted){window.location='./thanks.html';}"></iframe>
 
     <script>
-        //setTimeout(() => document.body.style.overflow = "hidden", 3800);
-        //setTimeout(() => document.body.classList.add("hidden-scroll"), 3800);
+
         $(function () {
+            setTimeout(() => {
+                $('body').removeClass('hidden-scroll')
+
+            }, 3800);
+
             $('.sp_btn').on('click', function () {
                 $('.sp_btn').toggleClass('open');
                 $('.sp_nav').fadeToggle();

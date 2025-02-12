@@ -13,6 +13,7 @@ body {
 }
 
 .hidden-scroll {
+    height: 100vh;
     overflow: hidden;
     /* スクロールを無効化 */
 }
