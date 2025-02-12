@@ -2,7 +2,7 @@
 
 html {
     overflow-x: hidden;
-    /* overflow: hidden; */
+
 }
 
 body {
@@ -13,7 +13,7 @@ body {
 }
 
 .hidden-scroll {
-    height: 100vh;
+    height: 100dvh;
     overflow: hidden;
     /* スクロールを無効化 */
 }
@@ -1014,11 +1014,6 @@ textarea.c-form__input {
 }
 
 @media screen and (max-width: 1100px) {
-
-    /*#Header {
-        padding-bottom: 100px;
-    }
-*/
     .Header_wrap {
         padding-left: 20px;
         padding-right: 20px;
@@ -1159,17 +1154,7 @@ textarea.c-form__input {
         width: 65%;
     }
 
-    /*スマホ版のホバーを無効にする*/
-    /*.works_btn:hover .check_btn {
-        transform: none;
-    }
 
-   .works_btn:hover {
-        background-color: #fc6349;
-
-        border-radius: 25px;
-    }
-*/
     .about_text1 {
         font-size: 30px;
     }
@@ -1178,17 +1163,6 @@ textarea.c-form__input {
         font-size: 16px;
     }
 
-    /*スマホ版のホバーを無効にする
-    .about_btn:hover .about_check_btn {
-        transform: translateX(0%);
-    }
-
-    .about_btn:hover {
-        background-color: #fc6349;
-        border-color: #fc6349;
-        border-radius: 246px;
-    }
-    */
 
 }
 
