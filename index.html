@@ -58,7 +58,7 @@
                         </a>
                     </li>
                     <li>
-                        <a href="#contact">
+                        <a href="./index.html#contact">
                             <span>CONTACT</span>
                             <span>お問合わせ</span>
                         </a>
@@ -80,7 +80,7 @@
                         <a href="./about.html">ABOUT</a>
                     </li>
                     <li>
-                        <a href="#contact">CONTACT</a>
+                        <a href="./index.html#contact">CONTACT</a>
                     </li>
                 </ul>
             </nav>
@@ -164,7 +164,8 @@
                         <p class="text_jp">デザイン</p>
                         <img src="images/SVG/skill_ds_illust.svg" alt="黄色のデザインアイコン">
                         <p class="skill_text">
-                            Webサイト、LP、バナー制作をメインに承ります。お客様の要望を丁寧にヒアリングし、デザインしていきます。イメージやコピーなどもご提案しますのでお気軽にご相談してください。</p>
+                            Webサイト、LP、バナー制作をメインに承ります。デザインの美しさだけでなく、ユーザーの行動を引き出す情報設計と機能性を組み込み、人の心を動かし、思わず行動したくなるような体験を提供することを目指しています。
+                        </p>
                         <div class="slill_tool">
                             <ul>
                                 <li>Illustrator</li>
@@ -177,7 +178,8 @@
                         <p class="text_jp">コーディング</p>
                         <img src="images/SVG/skill_cd_illust.svg" alt="黄色のコーディングアイコン">
                         <p class="skill_text">
-                            HTML、CSSを使用しレスポンシブにも対応したコーディングができます。<br />また、JavaScriptやjQueryを使用してサイトに動きをつけることも可能です。</p>
+                            HTML、CSSを使用しレスポンシブで様々なデバイスにも対応したコーディングができます。<br />また、JavaScriptやjQueryを使用してサイトに動きをつけることも可能です。
+                        </p>
                         <div class="slill_tool">
                             <ul>
                                 <li>VSCode</li>
@@ -253,7 +255,6 @@
                             <a href="./about.html">
                                 <img src="images/2x/top_about@2x.webp" alt="子供を抱っこしている写真">
                             </a>
-
                             <div class="click_text">
                                 <a href="./about.html">
                                     <img src="images/SVG/pc_about_cliclme.svg" alt="英語でクリックミーの文字">
@@ -266,7 +267,9 @@
                                     class="sp_br">つくるもので人と人の想いがつながって、その先に幸せな気持ちが生まれる。想いをつなぐお手伝いをさせてください。
                             </p>
                         </div>
-                        <p class="about_more">もっと詳しく見る！</p>
+
+                        <p class="about_more"><a href="./about.html">もっと詳しく見る！</a></p>
+
                     </div>
                 </div>
             </div>
@@ -359,11 +362,12 @@
 
     <script>
 
-        $(function () {
-            setTimeout(() => {
-                $('body').removeClass('hidden-scroll')
 
-            }, 3800);
+        $(function () {
+            //setTimeout(() => {
+            //  $('body').removeClass('hidden-scroll')
+
+            //}, 3800);
 
             $('.sp_btn').on('click', function () {
                 $('.sp_btn').toggleClass('open');

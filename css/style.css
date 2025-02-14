@@ -2,21 +2,28 @@
 
 html {
     overflow-x: hidden;
-
 }
 
 body {
-    overflow: hidden;
-    /* overflow-x: hidden; */
+    /* overflow: hidden; */
+    overflow-x: hidden;
     background-color: #FCF7E0;
 
 }
 
+/*  
 .hidden-scroll {
     height: 100dvh;
     overflow: hidden;
-    /* スクロールを無効化 */
+    animation: enable-scroll 3.8s forwards;
 }
+
+@keyframes enable-scroll {
+    to {
+        overflow: auto;
+    }
+}
+*/
 
 #Header {
     width: 100%;
@@ -60,7 +67,7 @@ body {
     height: 76px;
     background-color: #FFFCEE;
     border-radius: 38px;
-
+    opacity: 0.9;
 }
 
 
@@ -582,7 +589,7 @@ a:hover span:nth-child(1) {
     margin-right: 55px;
     text-align: center;
     width: 436px;
-    height: 627px;
+    height: 667px;
     background-color: #FFFCEE;
     border-radius: 218px;
 }
@@ -602,7 +609,7 @@ a:hover span:nth-child(1) {
 }
 
 .slill_tool ul {
-    padding-top: 3%;
+    padding-top: 9%;
     max-width: 232px;
     width: 100%;
     display: flex;
@@ -622,7 +629,7 @@ a:hover span:nth-child(1) {
 .skill_coding {
     text-align: center;
     width: 436px;
-    height: 627px;
+    height: 667px;
     background-color: #FFFCEE;
     border-radius: 218px;
 }
@@ -941,6 +948,7 @@ textarea.c-form__input {
     border: 3px solid transparent;
     cursor: pointer;
     font-size: 16px;
+    letter-spacing: 0.1em;
     color: #FFFCEE;
     font-weight: 800;
     font-family: "heisei-maru-gothic-std", sans-serif;
@@ -1206,7 +1214,7 @@ textarea.c-form__input {
 
 @media screen and (max-width: 768px) {
     #Header {
-        padding-bottom: 140px;
+        padding-bottom: 150px;
     }
 
 
@@ -1240,7 +1248,7 @@ textarea.c-form__input {
     .fadeIn_left {
         width: 174px;
         height: 174px;
-
+        top: 8%;
     }
 
     .fadeIn_right {
@@ -1268,6 +1276,10 @@ textarea.c-form__input {
         max-height: 34px;
     }
 
+    .concept_text {
+        padding-top: 278px;
+        padding-bottom: 182px;
+    }
 
     #skill_works {
         height: 2402px;
@@ -1285,7 +1297,12 @@ textarea.c-form__input {
     }
 
 
-    .skill_design,
+    .skill_design {
+        margin-right: 0;
+        width: 100%;
+        height: 580px;
+    }
+
     .skill_coding {
         margin-right: 0;
         width: 100%;
@@ -1366,7 +1383,6 @@ textarea.c-form__input {
         font-size: 16px;
     }
 
-
     .contact_text {
         padding: 0 46px 65px 46px;
         font-size: 16px;
@@ -1441,12 +1457,9 @@ textarea.c-form__input {
     }
 
     .loop_text {
-        margin-top: 170px;
+        margin-top: 180px;
     }
 
-    .concept_text {
-        padding-bottom: 182px;
-    }
 
     .catch_1 {
         font-size: 26px;
@@ -1457,6 +1470,7 @@ textarea.c-form__input {
     }
 
     #skill_works {
+        margin-top: 30px;
         height: 2102px;
     }
 
