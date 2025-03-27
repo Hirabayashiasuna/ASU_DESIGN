@@ -69,7 +69,7 @@
 .pre_memo {
     margin-top: 127px;
     width: 384px;
-    height: 897px;
+    height: 1057px;
     border-radius: 40px;
     border: 3px solid #FFD63A;
     background-color: #FFFCEE;
@@ -97,6 +97,7 @@
 .pre_memo_text1 {
     padding: 0 4px 20px 4px;
     font-size: 16px;
+    line-height: 1.68;
     border-bottom: 1px solid #CCCCCC;
 }
 
@@ -321,7 +322,7 @@
     #spClose {
         position: fixed;
         left: 65%;
-        top: 6%;
+        top: 10%;
     }
 
 

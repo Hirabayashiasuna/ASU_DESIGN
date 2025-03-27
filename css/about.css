@@ -479,9 +479,7 @@
 }
 
 @media screen and (max-width: 767px) {
-    #Header {
-        padding-bottom: 85px;
-    }
+
 
     .profile_title h2 {
         padding-top: 128px;
@@ -519,6 +517,7 @@
 }
 
 @media screen and (max-width: 390px) {
+
     #important h3 {
         font-size: 28px;
     }
