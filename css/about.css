@@ -434,7 +434,7 @@
 
     .myfavorite_container {
         margin: 0 auto;
-        width: 50%;
+        width: 60%;
         flex-wrap: wrap;
         gap: 34px;
     }
