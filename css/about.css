@@ -311,12 +311,15 @@
 }
 
 .myfavorite_container {
-    padding: 100px 170px;
+    padding: 100px 150px;
+    max-width: 1226px;
+    margin: 0 auto;
     display: flex;
     justify-content: space-between;
 }
 
 .myfavorite_icon {
+    padding: 0 10px;
     width: 210px;
     text-align: center;
 }
